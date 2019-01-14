@@ -1,0 +1,10 @@
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls_MarkupCompile.cache
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.g.cs
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls_MarkupCompile.lref
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\bin\Debug\UserControls.dll
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\bin\Debug\UserControls.pdb
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.baml
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.g.resources
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csproj.CoreCompileInputs.cache
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb
