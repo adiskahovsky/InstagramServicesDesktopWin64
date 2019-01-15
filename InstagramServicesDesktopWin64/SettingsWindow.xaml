@@ -25,8 +25,13 @@
         <Style TargetType="Numeric:NumericUpDown" BasedOn="{StaticResource MinNumericWidth}"/>
     </Window.Resources>
     <Grid>
+<<<<<<< HEAD
         <TabControl Margin="5">
             <TabItem>
+=======
+        <TabControl x:Name="products" Margin="5">
+            <TabItem x:Name="smartphonesTab">
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
                 <TabItem.Header>
                     <Label>Настройки</Label>
                 </TabItem.Header>
@@ -35,7 +40,12 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="375*"/>
                             <ColumnDefinition Width="375*"/>
+<<<<<<< HEAD
                             <ColumnDefinition Width="750*"/>
+=======
+                            <ColumnDefinition Width="375*"/>
+                            <ColumnDefinition Width="375*"/>
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
@@ -92,8 +102,12 @@
                                     <CheckBox Content="Включить случайную паузу во время выполнения"
                                           IsChecked="True"/>
                                     <StackPanel Orientation="Horizontal">
+<<<<<<< HEAD
                                         <Label Content="Кол-во действий" Margin="0, 0, 71, 0"/>
                                         <Label Content="от"/>
+=======
+                                        <Label Content="Кол-во действий в минутах,   от"/>
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
                                         <Numeric:NumericUpDown MinWidth="55" Value="200"/>
                                         <Label Content="до"/>
                                         <Numeric:NumericUpDown MinWidth="55" Value="205"/>
@@ -112,6 +126,7 @@
                                 </StackPanel>
                             </GroupBox>
                         </Grid>
+<<<<<<< HEAD
                         <Grid Grid.Column="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="80*"/>
@@ -341,6 +356,8 @@
                                 </GroupBox>
                             </Grid>
                         </Grid>
+=======
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
                     </Grid>
                 </TabItem.Content>
             </TabItem>

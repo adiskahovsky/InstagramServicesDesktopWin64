@@ -55,7 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
     <Compile Include="SettingsWindow.xaml.cs" />
+=======
+<<<<<<< HEAD
+=======
+    <Compile Include="SettingsWindow.xaml.cs" />
+>>>>>>> 0504a0e... Update .xaml.cs
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

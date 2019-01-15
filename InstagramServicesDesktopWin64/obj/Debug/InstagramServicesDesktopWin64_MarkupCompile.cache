@@ -12,9 +12,21 @@ DEBUG;TRACE
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\App.xaml
 2-649523810
 
+<<<<<<< HEAD
 61649743925
 14-597950880
 MainWindow.xaml;SettingsWindow.xaml;
+=======
+<<<<<<< HEAD
+5-2017746502
+141490998965
+MainWindow.xaml;
+=======
+61649743925
+14-597950880
+MainWindow.xaml;SettingsWindow.xaml;
+>>>>>>> 0504a0e... Update .xaml.cs
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
 
 False
 

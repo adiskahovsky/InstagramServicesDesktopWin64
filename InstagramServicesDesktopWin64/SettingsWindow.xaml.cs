@@ -29,10 +29,13 @@ namespace LikeProg
         {
             MessageBox.Show("lOX");
         }
+<<<<<<< HEAD
 
         private void ScrollBar_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
         {
 
         }
+=======
+>>>>>>> 2b3b2c0652a2af0745f2770c984fea4eba85e251
     }
 }
