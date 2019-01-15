@@ -25,8 +25,8 @@
         <Style TargetType="Numeric:NumericUpDown" BasedOn="{StaticResource MinNumericWidth}"/>
     </Window.Resources>
     <Grid>
-        <TabControl x:Name="products" Margin="5">
-            <TabItem x:Name="smartphonesTab">
+        <TabControl Margin="5">
+            <TabItem>
                 <TabItem.Header>
                     <Label>Настройки</Label>
                 </TabItem.Header>
@@ -35,8 +35,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="375*"/>
                             <ColumnDefinition Width="375*"/>
-                            <ColumnDefinition Width="375*"/>
-                            <ColumnDefinition Width="375*"/>
+                            <ColumnDefinition Width="750*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
@@ -93,7 +92,8 @@
                                     <CheckBox Content="Включить случайную паузу во время выполнения"
                                           IsChecked="True"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <Label Content="Кол-во действий в минутах,   от"/>
+                                        <Label Content="Кол-во действий" Margin="0, 0, 71, 0"/>
+                                        <Label Content="от"/>
                                         <Numeric:NumericUpDown MinWidth="55" Value="200"/>
                                         <Label Content="до"/>
                                         <Numeric:NumericUpDown MinWidth="55" Value="205"/>
@@ -111,6 +111,235 @@
                                     </StackPanel>
                                 </StackPanel>
                             </GroupBox>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80*"/>
+                                <RowDefinition Height="210*"/>
+                                <RowDefinition Height="93*"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Способ работы с Instagram" Margin="5, 0, 5, 0">
+                                <StackPanel Margin="5">
+                                    <RadioButton Content="Через веб-версию instagram.com" Margin="5, 10, 0, 5" IsChecked="True"/>
+                                    <RadioButton Content="Через приложение Instagram под Android" Margin="5, 0, 5, 0"/>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Grid.Row="1" Header="Настройки сервисов СМС" Margin="5, 25, 5, 0">
+                                <StackPanel>
+                                    <CheckBox Content="СМС сервисы без прокси" Margin="0, 10, 0, 0" HorizontalAlignment="Center"
+                                              IsChecked="True"/>
+                                    <DockPanel Margin="5, 40, 5, 0">
+                                        <CheckBox Content="SmsActivate" Margin="5" DockPanel.Dock="Left"
+                                                  VerticalAlignment="Center"/>
+                                        <TextBox Width="Auto" Margin="5, 5, 0, 5"/>
+                                    </DockPanel>
+                                    <DockPanel Margin="5, 0, 5, 0">
+                                        <CheckBox Content="CheapSms" Margin="5" DockPanel.Dock="Left"
+                                                  VerticalAlignment="Center"/>
+                                        <TextBox Width="Auto" Margin="16 5, 0, 5"/>
+                                    </DockPanel>
+                                    <DockPanel Margin="5, 0, 5, 0">
+                                        <CheckBox Content="VakSms" Margin="5" DockPanel.Dock="Left"
+                                                  VerticalAlignment="Center"/>
+                                        <TextBox Width="Auto" Margin="33, 5, 0, 5"/>
+                                    </DockPanel>
+                                    <DockPanel Margin="5, 0, 5, 0">
+                                        <CheckBox Content="SimSms" Margin="5" DockPanel.Dock="Left"
+                                                  VerticalAlignment="Center"/>
+                                        <TextBox Width="Auto" Margin="33, 5, 0, 5"/>
+                                    </DockPanel>
+                                    <DockPanel Margin="5, 0, 5, 0">
+                                        <CheckBox Content="Sms-online" Margin="5" DockPanel.Dock="Left"
+                                                  VerticalAlignment="Center"/>
+                                        <TextBox Width="Auto" Margin="12, 5, 0, 5"/>
+                                    </DockPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                                        <Label Content="Пауза между запросами" HorizontalAlignment="Center"/>
+                                        <Numeric:NumericUpDown/>
+                                        <Label Content="сек."/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                            <StackPanel Grid.Row="2">
+                                <CheckBox Content="Записывать лог каждого аккаунта" Margin="5"/>
+                                <CheckBox Content="Сохранять токены в файл token.txt" Margin="5"/>
+                                <CheckBox Content="Не выводить лог действий" Margin="5"/>
+                                <CheckBox Content="Подробный лог" Margin="5"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Пауза между запуском аккаунтов"/>
+                                    <Numeric:NumericUpDown/>
+                                    <Label Content="сек." Margin="5, 0, 0, 0"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="145*"/>
+                                <RowDefinition Height="60*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="400*"/>
+                                    <ColumnDefinition Width="340*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="170*"/>
+                                    <RowDefinition Height="335*"/>
+                                </Grid.RowDefinitions>
+                                <GroupBox Header="Расценка выполненных заданий">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="10, 10, 10, 5">
+                                            <CheckBox Content="Лайки минимум за"/>
+                                            <Numeric:NumericUpDown Margin="80, 0, 0, 0"/>
+                                            <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="10, 5, 10, 5">
+                                            <CheckBox Content="Подписки минимум за"/>
+                                            <Numeric:NumericUpDown Margin="57, 0, 0, 0"/>
+                                            <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="10, 5, 10, 5">
+                                            <CheckBox Content="Комментарии минимум за"/>
+                                            <Numeric:NumericUpDown Margin="32, 0, 0, 0"/>
+                                            <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox Header="Страны" Grid.Row="1">
+                                    <TabControl>
+                                        <TabItem Header="SimSms">
+                                            <TabItem.Content>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="150*"/>
+                                                        <ColumnDefinition Width="150*"/>
+                                                        <ColumnDefinition Width="100*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <StackPanel Grid.Column="0">
+                                                        <CheckBox Content="ES" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="ID" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="KZ" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="MY" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="PH" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="RU" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="UA" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="UK" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="LV" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="EE" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Column="1">
+                                                        <CheckBox Content="VN" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="IL" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="CN2" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="RO" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="FR" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="US" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="US2" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="US3" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="NL" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="PY" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Column="2">
+                                                        <CheckBox Content="PL" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="KG" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="LT" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </TabItem.Content>
+                                        </TabItem>
+                                        <TabItem Header="SmsActivate">
+                                            <TabItem.Content>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="150*"/>
+                                                        <ColumnDefinition Width="150*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <StackPanel Grid.Column="0">
+                                                        <CheckBox Content="Россия" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Украина" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Казахстан" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Китай" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Филлипины" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Мьянма" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Индонезия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Малайзия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Кения" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Танзания" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Column="1">
+                                                        <CheckBox Content="Вьетнам" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Кыргызстан" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="США" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Израиль" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                        <CheckBox Content="Гонконг" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </TabItem.Content>
+                                        </TabItem>
+                                        <TabItem Header="Sms-online">
+                                            <TabItem.Content>
+                                                <StackPanel>
+                                                    <CheckBox Content="Польша" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
+                                                    <CheckBox Content="Россия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    <CheckBox Content="Казахстан" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    <CheckBox Content="Киргизия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                    <CheckBox Content="Китай" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                </StackPanel>
+                                            </TabItem.Content>
+                                        </TabItem>
+                                    </TabControl>
+                                </GroupBox>
+                                <Grid Grid.Column="1">
+                                    <GroupBox Header="Кол-во попыто авторизации Like4u">
+                                        <StackPanel HorizontalAlignment="Center" Margin="45">
+                                            <Numeric:NumericUpDown/>
+                                        </StackPanel>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="1" Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <GroupBox Header="Кол-во попыток авторизации Instagram">
+                                        <StackPanel HorizontalAlignment="Center" Margin="40">
+                                            <Numeric:NumericUpDown/>
+                                        </StackPanel>
+                                    </GroupBox>
+                                    <StackPanel Grid.Row="1">
+                                        <Label Content="Тайм-аут ожидания смс:"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Numeric:NumericUpDown Margin="10"/>
+                                            <Label Content="сек." Margin="0, 8, 0, 0"></Label>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="113*"/>
+                                    <ColumnDefinition Width="133*"/>
+                                </Grid.ColumnDefinitions>
+                                <GroupBox Header="Приоритетная авторизация аккаунтов на Like4u">
+                                    <StackPanel>
+                                        <RadioButton Content="Размещение Like" IsChecked="True" Margin="30, 10, 0, 0"/>
+                                        <RadioButton Content="Изменение поля 'О себе'" Margin="30, 10, 0, 0"/>
+                                        <RadioButton Content="Через ULogin" Margin="30, 10, 0, 0"/>
+                                        <CheckBox Content="Использовать только приоритетный" Margin="15, 25, 0, 0"/>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox Grid.Column="1" Header="Прокси для почты">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="10">
+                                            <TextBox MinWidth="260" Margin="3, 0, 7, 0"/>
+                                            <Button DockPanel.Dock="Right" MinWidth="100" Content="Обзор"/>
+
+                                        </StackPanel>
+                                            <Label Content="Реферальная ссылка" Margin="3, 25, 0, 0"/>
+                                        <TextBox Margin="10, 5, 20, 0"></TextBox>
+                                    </StackPanel>
+                                </GroupBox>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </TabItem.Content>
