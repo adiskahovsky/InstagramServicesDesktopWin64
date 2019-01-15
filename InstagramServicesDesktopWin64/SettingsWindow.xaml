@@ -1,0 +1,128 @@
+﻿<Window x:Class="LikeProg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LikeProg"
+        xmlns:Numeric="clr-namespace:UserControls;assembly=UserControls"
+        mc:Ignorable="d"
+        Title="Настройки" Height="700" Width="1500">
+    <Window.Resources>
+        <Numeric:NumericUpDown x:Key="NumericUpDown"/>
+        <Style TargetType="{x:Type Control}" x:Key="baseStyle">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type Control}" x:Key="MinNumericWidth">
+            <Setter Property="MinWidth" Value="60"/>
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="Label" BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="TextBox" BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="GroupBox"  BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="CheckBox" BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="RadioButton" BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="Numeric:NumericUpDown" BasedOn="{StaticResource MinNumericWidth}"/>
+    </Window.Resources>
+    <Grid>
+        <TabControl x:Name="products" Margin="5">
+            <TabItem x:Name="smartphonesTab">
+                <TabItem.Header>
+                    <Label>Настройки</Label>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="375*"/>
+                            <ColumnDefinition Width="375*"/>
+                            <ColumnDefinition Width="375*"/>
+                            <ColumnDefinition Width="375*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="250*"/>
+                                <RowDefinition Height="230*"/>
+                                <RowDefinition Height="330*"/>
+                            </Grid.RowDefinitions>
+
+                            <GroupBox Grid.Column="0" Header="Задержка отправки запросов Like4u">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="5, 10, 5, 5">
+                                        <Label Content="Задержки на получение задания:"/>
+                                        <Numeric:NumericUpDown Value="5"/>
+                                        <Label Content="сек."/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="5">
+                                        <Label Content="Задержки на проверку задания:"
+                                           Margin="0, 0, 7, 0"/>
+                                        <Numeric:NumericUpDown Value="8"/>
+                                        <Label Content="сек."/>
+                                    </StackPanel>
+                                    <Label Content="Количество запросов на" Margin="5, 0, 0, 0"/>
+                                    <StackPanel Orientation="Horizontal" Margin="5, 0, 0, 0">
+                                        <Label Content="проверку заданий: " Margin="0, 0, 90, 0"/>
+                                        <Numeric:NumericUpDown Value="7"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Grid.Column="0" Header="Задержка отправки запросов Like4u" Grid.Row="1">
+                                <StackPanel>
+                                    <CheckBox Content="Не решать капчу" HorizontalAlignment="Center" Margin="0, 10, 0, 0"/>
+                                    <RadioButton Content="antigate.com" Margin="45, 30, 0, 5" IsChecked="True"/>
+                                    <RadioButton Content="rucaptcha.com" Margin="45, 0, 0, 5"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Ключ: "
+                                           Margin="5"/>
+                                        <TextBox MinWidth="270" Margin="10, 5, 0, 5"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Grid.Column="0" Grid.Row="2" Header="Настройка отписки Instagram">
+                                <StackPanel>
+                                    <Label Content="Задержка в сек между действиями:" HorizontalAlignment="Center"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Label Content="от" Margin="10, 0, 10, 0"/>
+                                        <Numeric:NumericUpDown HorizontalAlignment="Left" Value="50"/>
+                                        <Label Content="до" Margin="33, 0, 10, 0"/>
+                                        <Numeric:NumericUpDown Value="120"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0, 1, 0, 0">
+                                        <Label Content="Колличество удаляемых:" Margin="10, 0, 10, 0"/>
+                                        <Numeric:NumericUpDown Value="10000"/>
+                                    </StackPanel>
+                                    <CheckBox Content="Включить случайную паузу во время выполнения"
+                                          IsChecked="True"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Кол-во действий в минутах,   от"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="200"/>
+                                        <Label Content="до"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="205"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0, 4, 0 ,4">
+                                        <Label Content="Пауза в минутах,"/>
+                                        <Label Content="от" Margin="72, 0, 0, 0"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="5"/>
+                                        <Label Content="до"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="10"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Пауза между зап. аккаунтов: "/>
+                                        <Numeric:NumericUpDown Value="1" Margin="13, 0, 0, 0"></Numeric:NumericUpDown>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                        </Grid>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="tabletsTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Планшеты</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
