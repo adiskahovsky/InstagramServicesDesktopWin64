@@ -16,3 +16,5 @@ C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\InstagramServicesDeskt
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\UserControls.dll
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\UserControls.pdb
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\InstagramServicesDesktopWin64.csproj.CopyComplete
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\SettingsWindow.g.cs
+C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\SettingsWindow.baml

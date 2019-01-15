@@ -25,6 +25,10 @@
         <Style TargetType="Numeric:NumericUpDown" BasedOn="{StaticResource MinNumericWidth}"/>
     </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
         <TabControl x:Name="products" Margin="5">
             <TabItem x:Name="smartphonesTab">
                 <TabItem.Header>
@@ -43,6 +47,7 @@
                                 <RowDefinition Height="250*"/>
                                 <RowDefinition Height="230*"/>
                                 <RowDefinition Height="330*"/>
+                                
                             </Grid.RowDefinitions>
 
                             <GroupBox Grid.Column="0" Header="Задержка отправки запросов Like4u">
@@ -122,7 +127,149 @@
                         <TextBlock Margin="3">Планшеты</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
+
+                <StackPanel Orientation="Horizontal">
+                    <GroupBox Margin="5">
+                        <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                            
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Задержка между заливской постов: " Margin="5"></Label>
+                                    <Numeric:NumericUpDown Margin="5"></Numeric:NumericUpDown>
+                                    <Label Content=".сек" Margin="5"></Label>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Количество постов: " Margin="5"></Label>
+                                    <Numeric:NumericUpDown Margin="5"></Numeric:NumericUpDown>
+                                
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Задержк между концов и началом на следующий аккаунт: "></Label>
+                                    <Numeric:NumericUpDown Margin="5"></Numeric:NumericUpDown>
+                                    <Label Content=".сек"></Label>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <RadioButton Content="С удалением залитых фоток " Margin="5"></RadioButton>
+                                    <RadioButton Content="Без удаления залитых фоток " Margin="5"></RadioButton>
+                                
+                                </StackPanel>
+
+                            
+                                <CheckBox Content="Заливать аватары" Margin="10"></CheckBox>
+                                <CheckBox Content="Заливать только аватары без постов" Margin="10"></CheckBox>
+
+
+                                <StackPanel Orientation="Horizontal">
+                                
+                                    <GroupBox Header="Папка с фотками" Margin="10">
+                                        <DockPanel >
+                                            <TextBox Width="Auto" MinWidth="200" Margin="10"></TextBox>
+                                            <Button Content="Обзор" Margin="10"></Button>
+                                        </DockPanel>
+                                    
+                                    </GroupBox>
+
+                                    <GroupBox Header="Файл с комментариями" Margin="10">
+                                        <DockPanel >
+                                            <TextBox Width="Auto" MinWidth="200" Margin="10"></TextBox>
+                                            <Button Content="Обзор" Margin="10"></Button>
+                                        </DockPanel>
+                                    </GroupBox>
+
+                                </StackPanel>
+
+
+                                <StackPanel Orientation="Horizontal">
+                                    <GroupBox Header="Настройки проверки аккаунтов" Margin="10">
+                                        <StackPanel>
+                                            <CheckBox Content="Включить выключить" Margin="5"></CheckBox>
+                                            <DockPanel>
+                                                <Label Content="Интервал проверки: " Margin="5"></Label>
+                                                <Numeric:NumericUpDown Margin="5"></Numeric:NumericUpDown>
+                                                <Label Content=".сек" Margin="5"></Label>
+                                            </DockPanel>
+                                        </StackPanel>
+                                    </GroupBox>
+
+                                    <GroupBox Header="Прокси" Margin="10">
+                                        <StackPanel>
+                                            <Label Content="Обход со сменой прокси: " Margin="5"></Label>
+                                            <CheckBox Content="Включить/Выключить" Margin="5"></CheckBox>
+                                            <Label Content="Запросы в Like4u Без прокси: " Margin="5"></Label>
+                                            <CheckBox Content="Включить/Выключить" Margin="5"></CheckBox>
+                                        
+                                        </StackPanel>
+                                    
+                                    </GroupBox>
+
+                                </StackPanel>
+
+                                <GroupBox Header="Количество попыток входа">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Попыток" Margin="5"></Label>
+                                        <Numeric:NumericUpDown Margin="5"></Numeric:NumericUpDown>
+                                        <Label Content=".кол" Margin="5"></Label>
+                                    </StackPanel>
+                                
+                                
+                                
+                                </GroupBox>
+                            
+                            </StackPanel>
+                           
+                        </StackPanel>
+                    </GroupBox>
+
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <GroupBox  Header="Браузер" Margin="5" MaxHeight="100"  >
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBox Margin="5" MinWidth="200"></TextBox>
+                                <Button Content="Обзор"></Button>
+                            </StackPanel>
+                        </GroupBox>
+                        
+                        <GroupBox Header="Автозапуск всех аккаунтов" Grid.Column="1">
+                            <StackPanel>
+                                <CheckBox Content="Автозапуск всех аккаунтов" Margin="5"></CheckBox>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Запустить через"></Label>
+                                    <Numeric:NumericUpDown></Numeric:NumericUpDown>
+                                    <Label Content=".сек после запуска программы"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal">
+                            <Label Content="Задержка между изменением пароля и попыткой авторизации после этого: "></Label>
+                            <Numeric:NumericUpDown></Numeric:NumericUpDown>
+                        </StackPanel>
+                        
+                        
+                    </Grid>
+                    
+                </StackPanel>
+
+                
             </TabItem>
         </TabControl>
+        <StatusBar Grid.Row="1">
+           
+                
+            <Button Margin="5" HorizontalAlignment="Right" Content="Применить"></Button>
+            <Button Margin="5" HorizontalAlignment="Right" Content="Отменить"></Button>
+            
+        </StatusBar>
     </Grid>
 </Window>
