@@ -24,5 +24,10 @@ namespace LikeProg
         {
             InitializeComponent();
         }
+
+        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("lOX");
+        }
     }
 }
