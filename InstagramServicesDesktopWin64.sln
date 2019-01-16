@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramServicesDesktopWin64", "InstagramServicesDesktopWin64\InstagramServicesDesktopWin64.csproj", "{019304C8-054E-4EDA-9847-9DBBAE3C9779}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramServicesDesktopWin64", "InstagramServicesDesktopWin64\InstagramServicesDesktopWin64.csproj", "{5A226779-890D-4C35-A271-51BF213F3BC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{019304C8-054E-4EDA-9847-9DBBAE3C9779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{019304C8-054E-4EDA-9847-9DBBAE3C9779}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{019304C8-054E-4EDA-9847-9DBBAE3C9779}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{019304C8-054E-4EDA-9847-9DBBAE3C9779}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A226779-890D-4C35-A271-51BF213F3BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A226779-890D-4C35-A271-51BF213F3BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A226779-890D-4C35-A271-51BF213F3BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A226779-890D-4C35-A271-51BF213F3BC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,4 +8,16 @@ C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csproj.CoreCompileInputs.cache
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb
+<<<<<<< HEAD
 C:\Users\adisk\source\repos\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csprojAssemblyReference.cache
+=======
+E:\Projects\InstagramServicesDesktopWin64\UserControls\bin\Debug\UserControls.dll
+E:\Projects\InstagramServicesDesktopWin64\UserControls\bin\Debug\UserControls.pdb
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.g.cs
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls_MarkupCompile.cache
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls_MarkupCompile.lref
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.baml
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.g.resources
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb
+>>>>>>> 746473f5d8cc65d3c7b6b4f2900a2e4beff4e3b8

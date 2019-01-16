@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{019304C8-054E-4EDA-9847-9DBBAE3C9779}</ProjectGuid>
+    <ProjectGuid>{5A226779-890D-4C35-A271-51BF213F3BC0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>InstagramServicesDesktopWin64</RootNamespace>
     <AssemblyName>InstagramServicesDesktopWin64</AssemblyName>
@@ -100,12 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UserControls\UserControls.csproj">
-      <Project>{9f2e660c-08af-47ec-aa9f-f6f5d2c81027}</Project>
-      <Name>UserControls</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

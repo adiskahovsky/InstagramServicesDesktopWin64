@@ -3,98 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:US="clr-namespace:UserControls;assembly=UserControls"
         xmlns:local="clr-namespace:InstagramServicesDesktopWin64"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <DataGrid Margin="5"></DataGrid>
-        <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
-        <StackPanel Grid.Column="1" Grid.Row="0" >
-            <GroupBox Header="Управление" Margin="5">
-                <StackPanel Margin="5">
-                    <Button Content="Запустить Like4u" Margin="5" ></Button>
-                    <Button Content="Остановить Like4u" Margin="5"></Button>
-                    <Button Content="Запустить отписку" Margin="5"></Button>
-                    <Button Content="Остановить отписку" Margin="5"></Button>
-                    <Button Content="Проверка аккаунта" Margin="5"></Button>
-                    <Button Content="Настройки" Margin="5"></Button>
-                    <Button Content="Выгрузить базу" Margin="5"></Button>
-                    <Button Content="Постинг" Margin="5"></Button>
-                    <Button Content="Открыть в браузере" Margin="5"></Button>
-                </StackPanel>
-            </GroupBox>
-            
-            
-            <StackPanel Margin="5">
-
-                <GroupBox Header="Задержка в секундах">
-                    <StackPanel Margin="5">
-
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="От"></Label>
-                            <US:NumericUpDown></US:NumericUpDown>
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="До"></Label>
-                            <US:NumericUpDown></US:NumericUpDown>
-                        </StackPanel>
-
-                    </StackPanel>
-
-
-                </GroupBox>
-
-                <GroupBox>
-                    <StackPanel>
-                        <Label Content="Общий баланс: "></Label>
-                        <Label Content="В работе: "></Label>
-                        <Label Content="Выделено: "></Label>
-                        <Label Content="Всего лайков: "></Label>
-                        <Label Content="Всего подписок: "></Label>
-                        <Label Content="Всего комментариев"></Label>
-                    </StackPanel>
-                </GroupBox>
-
-                <GroupBox>
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="Смс: "></Label>
-                            <US:NumericUpDown Margin="11, 0, 0, 0"></US:NumericUpDown>
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="Капча: "></Label>
-                            <US:NumericUpDown></US:NumericUpDown>
-                            
-                            
-                        </StackPanel>
-                    </StackPanel>
-                </GroupBox>
-
-                <GroupBox>
-                    <StackPanel Margin="5">
-                        <Button Content="Загрузить аккаунты" Margin="5"></Button>
-                        <Button Content="Очистить лог" Margin="5"></Button>
-                        <Button Content="Сбросить все задачия" Margin="5"></Button>
-                    </StackPanel>
-                    
-                    
-                </GroupBox>
-                
-        </StackPanel>
-            
-
-        </StackPanel>
+        
     </Grid>
 </Window>

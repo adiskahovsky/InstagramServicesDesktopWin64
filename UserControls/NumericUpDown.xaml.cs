@@ -30,6 +30,15 @@ namespace UserControls
         }
 
 
+        private decimal _value;
+
+        public decimal Value
+        {
+            get { return _value; }
+            set { _value = value; }
+        }
+
+
         int minvalue = 0,
             maxvalue = 100,
             startvalue = 10;
