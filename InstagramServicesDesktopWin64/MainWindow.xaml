@@ -29,7 +29,7 @@
                     <Button Content="Проверка аккаунта" Margin="5"></Button>
                     <Button Content="Настройки" Margin="5"></Button>
                     <Button Content="Выгрузить базу" Margin="5"></Button>
-                    <Button Content="Постинг" Margin="5"></Button>
+                    <Button Content="Постинг" Margin="5" Click="Button_Click"></Button>
                     <Button Content="Открыть в браузере" Margin="5"></Button>
                 </StackPanel>
             </GroupBox>

@@ -35,8 +35,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.1\lib\netstandard1.3\crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.13.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.13\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="InstaSharp, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InstaSharp.2.0.6\lib\netstandard1.2\InstaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="InstaSharper, Version=1.4.82.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InstaSharper.1.4.82\lib\net452\InstaSharper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.0.1\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +78,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="InstagramTest.xaml.cs">
+      <DependentUpon>InstagramTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginTest.cs" />
     <Compile Include="SettingsWindow.xaml.cs" />
+    <Page Include="InstagramTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -91,6 +122,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,6 +132,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Instagram\Instagram.csproj">
+      <Project>{23fc2f52-3a5b-4f05-8065-21c59da1851d}</Project>
+      <Name>Instagram</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MailWorker\MailWorker.csproj">
+      <Project>{0406eb3d-d2df-43bc-a6d0-4582669c88ac}</Project>
+      <Name>MailWorker</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserControls\UserControls.csproj">
       <Project>{9f2e660c-08af-47ec-aa9f-f6f5d2c81027}</Project>
       <Name>UserControls</Name>
