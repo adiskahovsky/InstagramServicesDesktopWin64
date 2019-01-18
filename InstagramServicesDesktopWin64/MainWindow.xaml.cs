@@ -24,5 +24,24 @@ namespace InstagramServicesDesktopWin64
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
+
+        private  void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // var browser = new HTTPBrowser();
+            //MessageBox.Show(await browser.LoginAsync());
+
+
+
+           // HTTPAndroid android = new HTTPAndroid("_sit.com", "byflimix911", "178.124.152.84", 46854);
+
+            
+
+
+
+
+        }
+>>>>>>> c054e29... Update Instagram, Mail, Main
     }
 }
