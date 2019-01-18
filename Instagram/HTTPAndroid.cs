@@ -1,4 +1,5 @@
-﻿using InstaSharper.API;
+﻿using Instagram;
+using InstaSharper.API;
 using InstaSharper.API.Builder;
 using InstaSharper.Classes;
 using InstaSharper.Classes.Models;
@@ -11,22 +12,24 @@ using System.Threading.Tasks;
 
 namespace InstagramServicesDesktopWin64
 {
-    public class HTTPAndroid
+    public class HTTPAndroid:IInstagram 
     {
 
-        string _login;string _password;string _ip;int _port;
+        string _login;string _password;string _ip;int _port;string _proxyLogin;string _proxyPassword;
         
         private IInstaApi _instaApi;
         public IInstaApi InstaApi
         { get { return _instaApi; } }
         private IResult<InstaResetChallenge> result2;
 
-        public HTTPAndroid(string login,string password,string ip,int port)
+        public HTTPAndroid(string login,string password,string ip,int port,string proxyLogin,string proxyPassword)
         {
             _login = login;
             _password = password;
             _ip = ip;
             _port = port;
+            _proxyLogin = proxyLogin;
+            _proxyPassword = proxyPassword;
         }
         public async Task<IResult<InstaLoginResult>> Login()
         {
@@ -40,8 +43,8 @@ namespace InstagramServicesDesktopWin64
             };
             var httpHandler = new HttpClientHandler();
             //test125:As158233@185.195.25.241:42343
-            WebProxy wp = new WebProxy("91.227.155.166", 7951);
-            wp.Credentials = new NetworkCredential("17t3080724", "KJLDdrcde9");
+            WebProxy wp = new WebProxy(_ip, _port);
+            wp.Credentials = new NetworkCredential(_proxyLogin, _proxyPassword);
             httpHandler.Proxy = wp; //"178.124.152.84", 46854 17t3080724:KJLDdrcde9@91.227.155.166:7951
             var delay = RequestDelay.FromSeconds(1, 1);
             

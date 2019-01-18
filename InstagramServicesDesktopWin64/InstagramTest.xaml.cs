@@ -16,6 +16,7 @@ using HtmlAgilityPack;
 using Instagram;
 using MailWorker;
 
+
 namespace InstagramServicesDesktopWin64
 {
     /// <summary>
@@ -44,25 +45,37 @@ namespace InstagramServicesDesktopWin64
         private async void  Button_Click_1(object sender, RoutedEventArgs e)
         {
 
-            
 
 
-            HTTPAndroid android = new HTTPAndroid("KajigisMarlowe", "ayOaKoTc336Q", "",123);
-            var res=   await android.Login();
-            var api = android.InstaApi;
+            List<IInstagram> users = new List<IInstagram>();
 
-            await api.ChooseVerifyMethod(1);
-            await api.ChooseVerifyMethod(1);
-            Mail mail = new Mail();
-           string code =  mail.GetMailText();
+            users.Add(  new HTTPAndroid("KaramarAbby", "3KmjlFDF9NGV", "91.227.155.179", 7951, "17t3080724", "KJLDdrcde9"));
+            foreach (var user in users)
+            {
 
 
+                Mail mail = new Mail("shaelynja8y@mail.ru", "i37CeW8x");
+                var res = await user.Login();
+                var api = user.InstaApi;
 
-            HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
-      
-           
-            var res3 =  await api.SendVerifyCode(code);
-            var media = await  api.GetMediaIdFromUrlAsync(new Uri("https://www.instagram.com/p/Bml63cMHODq/"));
+
+                DateTime dt = DateTime.Now;
+                await api.ChooseVerifyMethod(1);
+               // await api.ChooseVerifyMethod(1);
+                
+                string code = mail.GetMailText(dt);
+
+
+
+
+
+
+                var res3 = await api.SendVerifyCode(code);
+                var media = await api.GetMediaIdFromUrlAsync(new Uri("https://www.instagram.com/p/Bml63cMHODq/"));
+                var media_like = await api.LikeMediaAsync(media.Value);
+                int i = 4;
+                
+            }
         }
     }
 }

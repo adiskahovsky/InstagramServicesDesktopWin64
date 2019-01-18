@@ -1,4 +1,5 @@
-﻿using InstaSharper.Classes;
+﻿using InstaSharper.API;
+using InstaSharper.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace Instagram
 {
-    interface IInstagram
+    public interface IInstagram
     {
+        IInstaApi InstaApi { get; }
 
-          Task<IResult<InstaLoginResult>> Login();
+        Task<IResult<InstaLoginResult>> Login();
    
 
     }
