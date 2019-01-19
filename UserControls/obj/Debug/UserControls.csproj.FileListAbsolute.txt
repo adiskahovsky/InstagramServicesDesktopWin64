@@ -17,3 +17,4 @@ E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.b
 E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.g.resources
 E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
 E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb
+E:\Projects\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csprojResolveAssemblyReference.cache

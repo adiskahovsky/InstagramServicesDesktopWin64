@@ -1,0 +1,10 @@
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\Instagram.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\Instagram.pdb
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\InstaSharper.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.csprojResolveAssemblyReference.cache
+E:\Projects\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.pdb
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\WebDriver.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\WebDriver.xml

@@ -34,3 +34,12 @@ E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debu
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\InstagramServicesDesktopWin64.g.resources
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\InstagramServicesDesktopWin64.Properties.Resources.resources
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\InstagramServicesDesktopWin64.csproj.GenerateResource.Cache
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Instagram.dll
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\InstaSharper.dll
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Instagram.pdb
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\TestWindow.g.cs
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\TestWindow.baml
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\WebDriver.dll
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\WebDriver.xml

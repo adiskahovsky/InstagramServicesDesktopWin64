@@ -10,11 +10,19 @@ none
 false
 DEBUG;TRACE
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\App.xaml
+<<<<<<< HEAD
 2-649523810
 
 61649743925
 14-597950880
 MainWindow.xaml;SettingsWindow.xaml;
+=======
+3931085222
+
+71133073301
+18-1977156632
+MainWindow.xaml;SettingsWindow.xaml;TestWindow.xaml;
+>>>>>>> d042853... WebBrowser loggining + working proxy
 
 False
 
