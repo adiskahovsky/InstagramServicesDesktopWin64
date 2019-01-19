@@ -82,6 +82,7 @@
       <DependentUpon>InstagramTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginTest.cs" />
+    <Compile Include="Serializer.cs" />
     <Compile Include="SettingsWindow.xaml.cs" />
     <Page Include="InstagramTest.xaml">
       <SubType>Designer</SubType>

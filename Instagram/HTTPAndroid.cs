@@ -39,6 +39,7 @@ namespace InstagramServicesDesktopWin64
                 
                 UserName = _login,
                 Password = _password
+                
                
             };
             var httpHandler = new HttpClientHandler();

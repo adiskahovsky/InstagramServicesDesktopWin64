@@ -6,22 +6,24 @@
         xmlns:local="clr-namespace:InstagramServicesDesktopWin64"
         mc:Ignorable="d"
         Title="InstagramTest" Height="450" Width="800">
-    <StackPanel>
+    <StackPanel>        
         <StackPanel Orientation="Horizontal">
-            <TextBox x:Name="tbLogin" MinWidth="300"></TextBox>
-            <TextBox x:Name="tbPassword" MinWidth="300"></TextBox>
+            <RadioButton x:Name="rbAndroid" Content="Android"/>
+            <RadioButton x:Name="rbBrowser" Content="Browser"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBox MinWidth="300"></TextBox>
-            <Button Content="OK" Click="Button_Click"></Button>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBox MinWidth="300"></TextBox>
-            <Button Content="OK" Click="Button_Click_1"></Button>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBox MinWidth="300"></TextBox>
-            <Button Content="OK"></Button>
-        </StackPanel>
+        <TextBox Height="23" TextWrapping="Wrap" x:Name="tbLogin" Margin="5, 5, 5, 0"/>
+        <TextBox Height="23" TextWrapping="Wrap" x:Name="tbVerifyCode" Margin="5, 0, 5, 0"/>
+        <Button Content="Start" Click="Start" Margin="5, 0, 5, 10"/>
+
+        <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbLike"/>
+        <Button Content="Like" Click="Verify" Margin="5, 0, 5, 10"/>
+
+        <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbComment"/>
+        <Button Content="Comment" Click="Comment_Click" Margin="5, 0, 5, 10"/>
+
+        <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbSubscribe"/>
+        <Button Content="Subscribe" Click="Subscribe_Click" Margin="5, 0, 5, 10"/>
+
+
     </StackPanel>
 </Window>

@@ -27,3 +27,4 @@ D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csproj.CoreCompileInputs.cache
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csprojAssemblyReference.cache
