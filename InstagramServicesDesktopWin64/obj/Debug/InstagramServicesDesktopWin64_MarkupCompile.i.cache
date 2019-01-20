@@ -10,11 +10,19 @@ none
 false
 DEBUG;TRACE
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\App.xaml
+<<<<<<< HEAD
 3931085222
 
 11-110727630
 18-1977156632
 MainWindow.xaml;SettingsWindow.xaml;TestWindow.xaml;
+=======
+3-1334291489
+
+141734924918
+79556097587
+InstagramTest.xaml;MainWindow.xaml;SettingsWindow.xaml;
+>>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
 
 False
 

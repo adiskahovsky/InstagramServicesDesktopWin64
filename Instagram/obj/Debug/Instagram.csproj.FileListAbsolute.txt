@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\Instagram.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\Instagram.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\InstaSharper.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\Newtonsoft.Json.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\Newtonsoft.Json.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.csprojAssemblyReference.cache
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.csproj.CoreCompileInputs.cache
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.csproj.CopyComplete
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.pdb
+>>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
 E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\Instagram.dll
 E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\Instagram.pdb
 E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\InstaSharper.dll

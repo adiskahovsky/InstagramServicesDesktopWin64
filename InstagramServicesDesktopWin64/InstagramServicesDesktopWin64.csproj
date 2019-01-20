@@ -64,6 +64,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
+=======
+    <Compile Include="InstagramTest.xaml.cs">
+      <DependentUpon>InstagramTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginTest.cs" />
+    <Compile Include="ProxyParse.cs" />
+    <Compile Include="Serializer.cs" />
+>>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
     <Compile Include="SettingsWindow.xaml.cs" />
     <Compile Include="TestWindow.xaml.cs">
       <DependentUpon>TestWindow.xaml</DependentUpon>
@@ -121,6 +130,17 @@
       <Project>{2b244f65-9971-4c57-9e77-54ab2386f35b}</Project>
       <Name>Instagram</Name>
     </ProjectReference>
+<<<<<<< HEAD
+=======
+    <ProjectReference Include="..\MailWorker\MailWorker.csproj">
+      <Project>{0406eb3d-d2df-43bc-a6d0-4582669c88ac}</Project>
+      <Name>MailWorker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmsLibrary\SmsLibrary.csproj">
+      <Project>{c548dcf6-00df-4929-9497-fc91b30a1b48}</Project>
+      <Name>SmsLibrary</Name>
+    </ProjectReference>
+>>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
     <ProjectReference Include="..\UserControls\UserControls.csproj">
       <Project>{9f2e660c-08af-47ec-aa9f-f6f5d2c81027}</Project>
       <Name>UserControls</Name>

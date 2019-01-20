@@ -1,0 +1,7 @@
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\bin\Debug\SmsLibrary.dll
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\bin\Debug\SmsLibrary.pdb
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\obj\Debug\SmsLibrary.csprojResolveAssemblyReference.cache
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\obj\Debug\SmsLibrary.dll
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\obj\Debug\SmsLibrary.pdb
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\InstagramServicesDesktopWin64\SmsLibrary\bin\Debug\Newtonsoft.Json.xml

@@ -13,7 +13,7 @@
         <Button Content="Start" Click="Start" Margin="5, 0, 5, 10"/>
         
         <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbLike"/>
-        <Button Content="Like" Click="Verify" Margin="5, 0, 5, 10"/>
+        <Button Content="Like" Click="RequestSms" Margin="5, 0, 5, 10"/>
 
         <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbComment"/>
         <Button Content="Comment" Click="Comment_Click" Margin="5, 0, 5, 10"/>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instagram", "Instagram\Inst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailWorker", "MailWorker\MailWorker.csproj", "{E24B7162-C80A-4D18-8C97-A9D2B13BFABD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsLibrary", "SmsLibrary\SmsLibrary.csproj", "{C548DCF6-00DF-4929-9497-FC91B30A1B48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,7 @@ Global
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F2E660C-08AF-47EC-AA9F-F6F5D2C81027}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{2B244F65-9971-4C57-9E77-54AB2386F35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B244F65-9971-4C57-9E77-54AB2386F35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B244F65-9971-4C57-9E77-54AB2386F35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +36,20 @@ Global
 		{E24B7162-C80A-4D18-8C97-A9D2B13BFABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E24B7162-C80A-4D18-8C97-A9D2B13BFABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E24B7162-C80A-4D18-8C97-A9D2B13BFABD}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{23FC2F52-3A5B-4F05-8065-21C59DA1851D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23FC2F52-3A5B-4F05-8065-21C59DA1851D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23FC2F52-3A5B-4F05-8065-21C59DA1851D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23FC2F52-3A5B-4F05-8065-21C59DA1851D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0406EB3D-D2DF-43BC-A6D0-4582669C88AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0406EB3D-D2DF-43BC-A6D0-4582669C88AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0406EB3D-D2DF-43BC-A6D0-4582669C88AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0406EB3D-D2DF-43BC-A6D0-4582669C88AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

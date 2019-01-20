@@ -11,6 +11,7 @@ false
 DEBUG;TRACE
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\App.xaml
 <<<<<<< HEAD
+<<<<<<< HEAD
 2-649523810
 
 61649743925
@@ -24,5 +25,13 @@ MainWindow.xaml;SettingsWindow.xaml;
 MainWindow.xaml;SettingsWindow.xaml;TestWindow.xaml;
 >>>>>>> d042853... WebBrowser loggining + working proxy
 
+=======
+3-1334291489
+
+10-1316241447
+79556097587
+InstagramTest.xaml;MainWindow.xaml;SettingsWindow.xaml;
+
+>>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
 False
 
