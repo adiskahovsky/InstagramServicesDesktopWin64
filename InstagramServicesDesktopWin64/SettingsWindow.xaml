@@ -278,12 +278,14 @@
                                         </TabItem>
                                         <TabItem Header="Sms-online">
                                             <TabItem.Content>
-                                                <StackPanel>
-                                                    <CheckBox Content="Польша" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
-                                                    <CheckBox Content="Россия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
-                                                    <CheckBox Content="Казахстан" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
-                                                    <CheckBox Content="Киргизия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
-                                                    <CheckBox Content="Китай" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
+                                                <StackPanel x:Name="smsOnline_StackPanel">
+                                                    <CheckBox Content="Китай" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16" Tag="24"/>
+                                                    <CheckBox Content="Казахстан" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16" Tag="42"/>
+                                                    <CheckBox Content="Россия" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16" Tag="68"/>
+                                                    <CheckBox Content="Польша" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16" Tag="127"/>
+                                                    <CheckBox Content="Кыргыстан" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16" Tag="152"/>
+                                                    <CheckBox Content="Конго" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16" Tag="246"/>
+                                                    <CheckBox Content="Украина" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16" Tag="294"/>
                                                 </StackPanel>
                                             </TabItem.Content>
                                         </TabItem>

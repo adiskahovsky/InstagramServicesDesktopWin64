@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheapSms.cs" />
+    <Compile Include="ISms.cs" />
+    <Compile Include="Randomer.cs" />
+    <Compile Include="SimSms.cs" />
     <Compile Include="SmsOnline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

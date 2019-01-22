@@ -67,8 +67,11 @@
     <Compile Include="HTTPAndroid.cs" />
     <Compile Include="HTTPBrowser.cs" />
     <Compile Include="IInstagram.cs" />
+<<<<<<< HEAD
     <Compile Include="NumberChangeClass.cs" />
 >>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
+=======
+>>>>>>> a01e71e... SMS services update
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyParse.cs" />
     <Compile Include="SelenInst.cs" />

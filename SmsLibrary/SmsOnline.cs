@@ -14,25 +14,34 @@ using System.Threading;
 
 namespace SmsLibrary
 {
-    public class SmsOnline
+    public class SmsOnline : ISms
     {
         private const string _apiToken = "R9BVOS6S3QAFB9PMTMJPB9LO5QGJL3UNVF66YKVDQ16CCQAP6OCLOHCXDAN1";
         private OrderClass contr;
 
+        private Dictionary<string, string> _proxy;
+        public Dictionary<string, string> Proxy
+        {
+            get { return _proxy; }
+            set { _proxy = value; }
+        }
+
+
+
         public SmsOnline() { }
 
-        public string GetNumber(List<string> countries, string ip, int port, string login, string password)
+        public string GetNumber(List<string> countries)
         {
-            HttpWebRequest webRequest = WebRequest.Create("https://sms-online.pro/api/orders/create/24?api_token=R9BVOS6S3QAFB9PMTMJPB9LO5QGJL3UNVF66YKVDQ16CCQAP6OCLOHCXDAN1")
+            string randomCountry = countries[Randomer.Next(countries.Count)];
+            HttpWebRequest webRequest = WebRequest.Create($"https://sms-online.pro/api/orders/create/{randomCountry}?api_token={_apiToken}")
                             as HttpWebRequest;
             if (webRequest == null)
-            {
                 return null;
-            }
 
+            //TODO: Check available numbers for country
 
-            WebProxy wp = new WebProxy(ip, port);
-            wp.Credentials = new NetworkCredential(login, password);
+            WebProxy wp = new WebProxy(_proxy["ip"], Int32.Parse(_proxy["port"]));
+            wp.Credentials = new NetworkCredential(_proxy["username"], _proxy["password"]);
 
             webRequest.Proxy = wp;
             webRequest.ContentType = "application/json";
@@ -67,7 +76,7 @@ namespace SmsLibrary
             while (CheckStatus(contr.data.id).data.state == "awaiting_sms")
             {
                 CheckStatus(contr.data.id);
-                Thread.Sleep(8000);
+                Thread.Sleep(1500);
             }
             if (CheckStatus(contr.data.id).data.state == "success")
                 return CheckStatus(contr.data.id).data.description;
@@ -77,7 +86,7 @@ namespace SmsLibrary
 
         public bool GetBalance()
         {
-            var webRequest = WebRequest.Create("https://sms-online.pro/api/balance/get?api_token=R9BVOS6S3QAFB9PMTMJPB9LO5QGJL3UNVF66YKVDQ16CCQAP6OCLOHCXDAN1")
+            var webRequest = WebRequest.Create($"https://sms-online.pro/api/balance/get?api_token={_apiToken}")
                 as HttpWebRequest;
 
             if (webRequest == null)
@@ -107,6 +116,9 @@ namespace SmsLibrary
                 return null;
             }
 
+            WebProxy wp = new WebProxy(_proxy["ip"], Int32.Parse(_proxy["port"]));
+            wp.Credentials = new NetworkCredential(_proxy["username"], _proxy["password"]);
+
             webRequest.ContentType = "application/json";
             OrderStatusClass contrs = new OrderStatusClass();
 
@@ -120,6 +132,8 @@ namespace SmsLibrary
             }
             return contrs;
         }
+
+
 
         #region WORKFLOW_JSON__GET_ALL_SERVICES
         public class WorkflowClass

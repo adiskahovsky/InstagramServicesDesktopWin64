@@ -29,9 +29,6 @@ namespace InstagramServicesDesktopWin64
         {
             users = new List<IInstagram>();
             InitializeComponent();
-
-            NumberChangeClass numberChanger = new NumberChangeClass();
-            numberChanger.AddNewInstagramNumber("35522342", "KajigisMarlowe", "ayOaKoTc336Q");
         }
 
         private async void Start(object sender, RoutedEventArgs e)
@@ -46,19 +43,14 @@ namespace InstagramServicesDesktopWin64
                 });
             }
             var result = await users[0].Login();
-            
+
+
             SmsOnline sms = new SmsOnline();
-            string number = sms.GetNumber(new List<string>(), "91.227.155.166", 7951, "17t3080724", "KJLDdrcde9");
-
-            NumberChangeClass numberChanger = new NumberChangeClass();
-            numberChanger.AddNewInstagramNumber(number, "KajigisMarlowe", "ayOaKoTc336Q");
+            string number = sms.GetNumber(new List<string>());
             
-            await users[0].Verify(sms.GetSms());
-
-            numberChanger.RemoveInstagramNumber();
-            //request = new HTTPBrowser();
-            //Dictionary<string, string> parsed = ProxyParse.Parse("17t3080724:KJLDdrcde9@91.227.155.166:7951");
-            //request.Login("KalkisVienna", "PULUFLbxArbR", parsed["ip"], Int32.Parse(parsed["port"]), parsed["username"], parsed["password"]);
+            //changeNumber request
+            
+            await users[0].Verify(sms.GetSms());            
         }
 
         private void Like_Click(object sender, RoutedEventArgs e)
@@ -68,7 +60,11 @@ namespace InstagramServicesDesktopWin64
 
         private void Comment_Click(object sender, RoutedEventArgs e)
         {
-            
+            CheapSms sms = new CheapSms() { Proxy = ProxyParse.Parse("17t3080724:KJLDdrcde9@91.227.155.166:7951")};
+            if (sms.GetNumberCount() > 0)
+            {
+                string number = sms.GetNumber();
+            }        
         }
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)
@@ -80,7 +76,7 @@ namespace InstagramServicesDesktopWin64
         {
             SmsOnline sms = new SmsOnline();
 
-            string number = sms.GetNumber(new List<string>(), "91.227.155.166", 7951, "17t3080724", "KJLDdrcde9");
+            string number = sms.GetNumber(new List<string>());
         }
     }
 }

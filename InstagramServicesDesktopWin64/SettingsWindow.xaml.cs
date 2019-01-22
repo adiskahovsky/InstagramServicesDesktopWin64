@@ -27,7 +27,21 @@ namespace LikeProg
 
         private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("lOX");
+        }
+
+        private List<string> GetSmsOnlineCountries()
+        {
+            List<string> tags = new List<string>();
+            var children = LogicalTreeHelper.GetChildren(smsOnline_StackPanel);
+
+            foreach (var box in children)
+            {
+                var chkBox = box as CheckBox;
+                if (chkBox.IsEnabled == true)                
+                    tags.Add(chkBox.Tag.ToString());                
+            }
+
+            return tags;
         }
 
         private void ScrollBar_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
