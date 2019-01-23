@@ -3,6 +3,7 @@ using InstaSharper.API.Builder;
 using InstaSharper.Classes;
 using InstaSharper.Classes.Models;
 using InstaSharper.Logger;
+using MailWorker;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,12 @@ using System.Threading.Tasks;
 
 namespace Instagram
 {
-    class HTTPBrowser:IInstagram
+    public class HTTPBrowser:IInstagram
     {
         private UserSessionData _user;
         private IInstaApi _api;
-
+        private Mail _mail;
+        public Mail mail { get { return _mail; } set { _mail = value; } }
         public HTTPBrowser()
         {
             _user = new UserSessionData();
@@ -73,7 +75,7 @@ namespace Instagram
             set { _password = value; }
         }
 
-
+        
 
         public async Task<IResult<InstaLoginResult>> Login()
         {

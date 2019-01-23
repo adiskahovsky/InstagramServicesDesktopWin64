@@ -57,5 +57,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MailWorker\MailWorker.csproj">
+      <Project>{0406eb3d-d2df-43bc-a6d0-4582669c88ac}</Project>
+      <Name>MailWorker</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

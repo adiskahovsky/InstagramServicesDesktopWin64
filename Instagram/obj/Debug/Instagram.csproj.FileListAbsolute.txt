@@ -8,3 +8,13 @@ D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.cspro
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.csproj.CopyComplete
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.dll
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\MailWorker.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\AE.Net.Mail.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\HtmlAgilityPack.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\ActiveUp.Net.Imap4.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\ActiveUp.Net.Common.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\ActiveUp.Net.Dns.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\MailWorker.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\AE.Net.Mail.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\HtmlAgilityPack.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\Instagram\bin\Debug\HtmlAgilityPack.xml

@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:InstagramServicesDesktopWin64"
         mc:Ignorable="d"
         Title="InstagramTest" Height="450" Width="800">
-    <StackPanel>        
+    <StackPanel>
+        <Label Content="В залогинены: " x:Name="labelLog"></Label>
         <StackPanel Orientation="Horizontal">
             <RadioButton x:Name="rbAndroid" Content="Android"/>
             <RadioButton x:Name="rbBrowser" Content="Browser"/>
         </StackPanel>
-        <TextBox Height="23" TextWrapping="Wrap" x:Name="tbLogin" Margin="5, 5, 5, 0"/>
-        <TextBox Height="23" TextWrapping="Wrap" x:Name="tbVerifyCode" Margin="5, 0, 5, 0"/>
+        <TextBox Height="23" Text="ПУть к файлу с аккаунтами" TextWrapping="Wrap" x:Name="tbUsers" Margin="5, 5, 5, 0"/>
+        <TextBox Height="23" Text="Путь к файлу с прокси" TextWrapping="Wrap" x:Name="tbProxy" Margin="5, 0, 5, 0"/>
         <Button Content="Start" Click="Start" Margin="5, 0, 5, 10"/>
 
         <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbLike"/>
-        <Button Content="Like" Click="Verify" Margin="5, 0, 5, 10"/>
+        <Button Content="Like" Click="Like_Click" Margin="5, 0, 5, 10"/>
 
         <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbComment"/>
         <Button Content="Comment" Click="Comment_Click" Margin="5, 0, 5, 10"/>

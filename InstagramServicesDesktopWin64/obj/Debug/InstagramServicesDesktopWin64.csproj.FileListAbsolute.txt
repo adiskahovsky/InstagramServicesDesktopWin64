@@ -77,3 +77,17 @@ D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\D
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\HtmlAgilityPack.dll
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\HtmlAgilityPack.pdb
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\HtmlAgilityPack.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.Modules.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.SQLite.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.Wpf.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Dynamic.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Scripting.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Scripting.Metadata.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.Modules.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.SQLite.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\IronPython.Wpf.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Dynamic.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Scripting.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Scripting.Metadata.xml
