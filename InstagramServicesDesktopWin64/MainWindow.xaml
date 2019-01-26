@@ -7,94 +7,149 @@
         xmlns:local="clr-namespace:InstagramServicesDesktopWin64"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <TabControl>
+        <TabItem>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-        <DataGrid Margin="5"></DataGrid>
-        <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
-        <StackPanel Grid.Column="1" Grid.Row="0" >
-            <GroupBox Header="Управление" Margin="5">
-                <StackPanel Margin="5">
-                    <Button Content="Запустить Like4u" Margin="5" ></Button>
-                    <Button Content="Остановить Like4u" Margin="5"></Button>
-                    <Button Content="Запустить отписку" Margin="5"></Button>
-                    <Button Content="Остановить отписку" Margin="5"></Button>
-                    <Button Content="Проверка аккаунта" Margin="5"></Button>
-                    <Button Content="Настройки" Margin="5"></Button>
-                    <Button Content="Выгрузить базу" Margin="5"></Button>
-                    <Button Content="Постинг" Margin="5" Click="Button_Click"></Button>
-                    <Button Content="Открыть в браузере" Margin="5"></Button>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Margin="5" x:Name="dgMain" AutoGenerateColumns="False" LoadingRow="dgMain_LoadingRow">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="№" Binding="{Binding RowNumber}" MaxWidth="35"/>
+                            <DataGridTextColumn Header="Логин" Binding="{Binding Login}" />
+                            <DataGridTextColumn Header="Статус" Binding="{Binding Status}" />
+                            <DataGridTextColumn Header="Баланс" Binding="{Binding Balance}" />
+                            <DataGridTextColumn Header="Выполнено лайков" Binding="{Binding LikesRecieved}" />
+                            <DataGridTextColumn Header="Выполнено подп." Binding="{Binding SubscribeRecieved}" />
+                            <DataGridTextColumn Header="Выполнено комм." Binding="{Binding CommentsRecieved}"/>
+                            <DataGridTextColumn Header="Подписок" Binding="{Binding Subscribes}" />
+                            <DataGridTextColumn Header="Отписок" Binding="{Binding UnSubscribes}"/>
+                            <DataGridTextColumn Header="Комментарии" Binding="{Binding Comments}" />
+                            <DataGridTextColumn Header="Прокси" Binding="{Binding Proxy}" />
+                            <DataGridTextColumn Header="Публикаций" Binding="{Binding Publications}" />
+                            <DataGridTextColumn Header="Подписчиков" Binding="{Binding CurrentSubscribers}" />
+                            <DataGridTextColumn Header="Аватар" Binding="{Binding Photo}" />
+                            <DataGridTextColumn Header="Коэфф. качества" Binding="{Binding Accuracy}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Border Grid.Row="1" Grid.Column="0" BorderThickness="2" BorderBrush="Gray" Margin="5">
+                        <TextBlock x:Name="tbLogs" Background="WhiteSmoke"/>
+                    </Border>
+                </Grid>
+                <StackPanel Grid.Column="1" Grid.Row="0" >
+                    <GroupBox Header="Управление" Margin="5">
+                        <StackPanel Margin="5">
+                            <Button Content="Запустить Like4u" Margin="5" ></Button>
+                            <Button Content="Остановить Like4u" Margin="5"></Button>
+                            <Button Content="Запустить отписку" Margin="5"></Button>
+                            <Button Content="Остановить отписку" Margin="5"></Button>
+                            <Button Content="Проверка аккаунта" Margin="5"></Button>
+                            <Button Content="Настройки" Margin="5" Click="Open_Settings"></Button>
+                            <Button Content="Выгрузить базу" Margin="5"></Button>
+                            <Button Content="Постинг" Margin="5" Click="Button_Click"></Button>
+                            <Button Content="Открыть в браузере" Margin="5"></Button>
+                        </StackPanel>
+                    </GroupBox>
+
+
+                    <StackPanel Margin="5">
+
+                        <GroupBox Header="Задержка в секундах">
+                            <StackPanel Margin="5">
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Label Content="От"></Label>
+                                    <US:NumericUpDown></US:NumericUpDown>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Label Content="До"></Label>
+                                    <US:NumericUpDown></US:NumericUpDown>
+                                </StackPanel>
+
+                            </StackPanel>
+
+
+                        </GroupBox>
+
+                        <GroupBox>
+                            <StackPanel>
+                                <Label Content="Общий баланс: "></Label>
+                                <Label Content="В работе: "></Label>
+                                <Label Content="Выделено: "></Label>
+                                <Label Content="Всего лайков: "></Label>
+                                <Label Content="Всего подписок: "></Label>
+                                <Label Content="Всего комментариев"></Label>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Label Content="Смс: "></Label>
+                                    <US:NumericUpDown Margin="11, 0, 0, 0"></US:NumericUpDown>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Label Content="Капча: "></Label>
+                                    <US:NumericUpDown></US:NumericUpDown>
+
+
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox>
+                            <StackPanel Margin="5">
+                                <Button Content="Загрузить аккаунты" Margin="5"></Button>
+                                <Button Content="Очистить лог" Margin="5"></Button>
+                                <Button Content="Сбросить все задачия" Margin="5"></Button>
+                            </StackPanel>
+
+
+                        </GroupBox>
+
+                    </StackPanel>
+
+
                 </StackPanel>
-            </GroupBox>
-            
-            
-            <StackPanel Margin="5">
+            </Grid>
+        </TabItem>
+        <TabItem Header="Инстаграмм тест">
+            <StackPanel>
+                <Label Content="В залогинены: " x:Name="labelLog"></Label>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="rbAndroid" Content="Android"/>
+                    <RadioButton x:Name="rbBrowser" Content="Browser"/>
+                </StackPanel>
+                <TextBox Height="23" Text="ПУть к файлу с аккаунтами" TextWrapping="Wrap" x:Name="tbUsers" Margin="5, 5, 5, 0"/>
+                <TextBox Height="23" Text="Путь к файлу с прокси" TextWrapping="Wrap" x:Name="tbProxy" Margin="5, 0, 5, 0"/>
+                <Button Content="Start" Click="Start" Margin="5, 0, 5, 10"/>
 
-                <GroupBox Header="Задержка в секундах">
-                    <StackPanel Margin="5">
+                <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbLike"/>
+                <Button Content="Like" Click="Like_Click" Margin="5, 0, 5, 10"/>
 
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="От"></Label>
-                            <US:NumericUpDown></US:NumericUpDown>
-                        </StackPanel>
+                <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbComment"/>
+                <Button Content="Comment" Click="Comment_Click" Margin="5, 0, 5, 10"/>
 
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="До"></Label>
-                            <US:NumericUpDown></US:NumericUpDown>
-                        </StackPanel>
-
-                    </StackPanel>
+                <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbSubscribe"/>
+                <Button Content="Subscribe" Click="Subscribe_Click" Margin="5, 0, 5, 10"/>
 
 
-                </GroupBox>
+            </StackPanel>
 
-                <GroupBox>
-                    <StackPanel>
-                        <Label Content="Общий баланс: "></Label>
-                        <Label Content="В работе: "></Label>
-                        <Label Content="Выделено: "></Label>
-                        <Label Content="Всего лайков: "></Label>
-                        <Label Content="Всего подписок: "></Label>
-                        <Label Content="Всего комментариев"></Label>
-                    </StackPanel>
-                </GroupBox>
 
-                <GroupBox>
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="Смс: "></Label>
-                            <US:NumericUpDown Margin="11, 0, 0, 0"></US:NumericUpDown>
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Label Content="Капча: "></Label>
-                            <US:NumericUpDown></US:NumericUpDown>
-                            
-                            
-                        </StackPanel>
-                    </StackPanel>
-                </GroupBox>
-
-                <GroupBox>
-                    <StackPanel Margin="5">
-                        <Button Content="Загрузить аккаунты" Margin="5"></Button>
-                        <Button Content="Очистить лог" Margin="5"></Button>
-                        <Button Content="Сбросить все задачия" Margin="5"></Button>
-                    </StackPanel>
-                    
-                    
-                </GroupBox>
-                
-        </StackPanel>
-            
-
-        </StackPanel>
-    </Grid>
+        </TabItem>
+    </TabControl>
 </Window>

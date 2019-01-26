@@ -117,6 +117,46 @@ namespace Instagram
             return await _api.GetUserAsync("_sit.com_"); //TODO: log
         }
 
+        public async Task<IResult<bool>> LikePost(string uri)
+        {
+            var mediaId = await _api.GetMediaIdFromUrlAsync(new Uri(uri));
 
+
+            return await _api.LikeMediaAsync(mediaId.Value);
+        }
+
+
+        public async Task<IResult<bool>> UnLikePost(string uri)
+        {
+            var mediaId = await _api.GetMediaIdFromUrlAsync(new Uri(uri));
+            return await _api.UnLikeMediaAsync(mediaId.Value);
+        }
+
+        public async Task<IResult<InstaComment>> CommentPost(string uri)
+        {
+            var mediaId = await _api.GetMediaIdFromUrlAsync(new Uri(uri));
+            return await _api.CommentMediaAsync(mediaId.Value, "Круто");
+
+
+        }
+
+        public async Task<IResult<bool>> UnCommentPost(string uri)
+        {
+            var mediaId = await _api.GetMediaIdFromUrlAsync(new Uri(uri));
+            return await _api.DeleteCommentAsync(mediaId.Value, "Hello");
+        }
+
+        public async Task<IResult<InstaFriendshipStatus>> Subscribe(string uri)
+        {
+            var userInfo = await _api.GetUserInfoByUsernameAsync("uri");
+            return await _api.FollowUserAsync(userInfo.Value.Pk);
+        }
+
+        public async Task<IResult<InstaFriendshipStatus>> UnSubscribe(string uri)
+        {
+            var userInfo = await _api.GetUserInfoByUsernameAsync(uri);
+
+            return await _api.UnFollowUserAsync(userInfo.Value.Pk);
+        }
     }
 }

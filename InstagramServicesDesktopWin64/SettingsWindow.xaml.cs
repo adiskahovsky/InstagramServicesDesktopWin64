@@ -18,9 +18,9 @@ namespace LikeProg
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SettingsWindow : Window
     {
-        public MainWindow()
+        public SettingsWindow()
         {
             InitializeComponent();
         }

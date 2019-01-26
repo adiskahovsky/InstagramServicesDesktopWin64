@@ -32,8 +32,8 @@ namespace InstagramServicesDesktopWin64
         List<IInstagram> users;
         List<IInstagram> Login_Users;
         int sum = 0;
-      
-        
+
+        private delegate void Logging();
 
         public InstagramTest()
         {

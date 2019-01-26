@@ -102,10 +102,12 @@
     <Compile Include="InstagramTest.xaml.cs">
       <DependentUpon>InstagramTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LinkConverter.cs" />
     <Compile Include="LoginTest.cs" />
     <Compile Include="ProxyParse.cs" />
     <Compile Include="Serializer.cs" />
     <Compile Include="SettingsWindow.xaml.cs" />
+    <Compile Include="ShowCollection.cs" />
     <Compile Include="UsersParse.cs" />
     <Page Include="InstagramTest.xaml">
       <SubType>Designer</SubType>
@@ -156,9 +158,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SettingsLibrary\SettingsLibrary\SettingsLibrary.csproj">
+      <Project>{f7477c1a-ca28-41c1-9921-8de59be1c552}</Project>
+      <Name>SettingsLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Instagram\Instagram.csproj">
       <Project>{23fc2f52-3a5b-4f05-8065-21c59da1851d}</Project>
       <Name>Instagram</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogLibrary\LogLibrary.csproj">
+      <Project>{3e389961-ed1d-40c6-8038-3c5672ea7066}</Project>
+      <Name>LogLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\MailWorker\MailWorker.csproj">
       <Project>{0406eb3d-d2df-43bc-a6d0-4582669c88ac}</Project>

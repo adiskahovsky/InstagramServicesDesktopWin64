@@ -91,3 +91,7 @@ D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\D
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Dynamic.xml
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Scripting.xml
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\Microsoft.Scripting.Metadata.xml
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\LogLibrary.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\LogLibrary.pdb
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\SettingsLibrary.dll
+D:\WorkSpaceC#\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\SettingsLibrary.pdb

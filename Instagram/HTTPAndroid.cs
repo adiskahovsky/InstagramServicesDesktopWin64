@@ -2,6 +2,7 @@
 using InstaSharper.API;
 using InstaSharper.API.Builder;
 using InstaSharper.Classes;
+using InstaSharper.Classes.Android;
 using InstaSharper.Classes.Models;
 using InstaSharper.Classes.ResponseWrappers;
 using InstaSharper.Logger;
@@ -25,6 +26,15 @@ namespace InstagramServicesDesktopWin64
         }
 
         private int _port;
+
+        private string _CsrfToken;
+
+        public string CsrfToken
+        {
+            get { return _CsrfToken; }
+            set { _CsrfToken = value; }
+        }
+
 
         public int port
         {
@@ -71,6 +81,11 @@ namespace InstagramServicesDesktopWin64
         private Mail _mail;
         public Mail mail { get { return _mail; } set { _mail = value; } }
 
+
+
+
+
+
        // private IResult<InstaResetChallenge> result2;
         /*
         public HTTPAndroid(string login,string password,string ip,int port,string proxyLogin,string proxyPassword)
@@ -85,7 +100,59 @@ namespace InstagramServicesDesktopWin64
         */
         public HTTPAndroid()
         {
+            
         }
+
+
+        //public async  Task<IResult<InstaLoginResult>> LoginWithNumber()
+        //{
+        //  //await   _instaApi.lo
+
+        //}
+
+
+        public async Task<IResult<bool>> LikePost(string uri)
+        {
+            var mediaId = await _instaApi.GetMediaIdFromUrlAsync(new Uri(uri));
+           
+
+            return await _instaApi.LikeMediaAsync(mediaId.Value);
+        }
+
+
+        public async Task<IResult<bool>> UnLikePost(string uri)
+        {
+            var mediaId = await _instaApi.GetMediaIdFromUrlAsync(new Uri(uri));
+            return await _instaApi.UnLikeMediaAsync(mediaId.Value);
+        }
+
+        public async Task<IResult<InstaComment>> CommentPost(string uri)
+        {
+            var mediaId = await _instaApi.GetMediaIdFromUrlAsync(new Uri(uri));
+            return await _instaApi.CommentMediaAsync(mediaId.Value,"Круто");
+
+
+        }
+
+        public async Task<IResult<bool>> UnCommentPost(string uri)
+        {
+            var mediaId = await _instaApi.GetMediaIdFromUrlAsync(new Uri(uri));
+            return await _instaApi.DeleteCommentAsync(mediaId.Value,"Hello");
+        }
+
+        public async  Task<IResult<InstaFriendshipStatus >> Subscribe(string uri)
+        {
+           var userInfo =  await _instaApi.GetUserInfoByUsernameAsync("uri");
+            return await _instaApi.FollowUserAsync(userInfo.Value.Pk);
+        }
+
+        public async Task<IResult<InstaFriendshipStatus>> UnSubscribe(string uri)
+        {
+            var userInfo = await _instaApi.GetUserInfoByUsernameAsync(uri);
+
+            return await _instaApi.UnFollowUserAsync(userInfo.Value.Pk);
+        }
+
 
         public async Task<IResult<InstaLoginResult>> Login()
         {
@@ -98,7 +165,10 @@ namespace InstagramServicesDesktopWin64
                 
                
             };
+            
+            
             var httpHandler = new HttpClientHandler();
+            
             //test125:As158233@185.195.25.241:42343
             WebProxy wp = new WebProxy(_ip, _port);
             wp.Credentials = new NetworkCredential(_proxyUserName,_proxyPassword);
@@ -112,9 +182,9 @@ namespace InstagramServicesDesktopWin64
                 .UseHttpClientHandler(httpHandler)
                 .Build();
 
-
-             
-            return await  _instaApi.LoginAsync();
+            var res = await _instaApi.LoginAsync();
+            _CsrfToken = userSession.CsrfToken;
+            return res;
 
 
 
@@ -136,10 +206,6 @@ namespace InstagramServicesDesktopWin64
 
            // return await _instaApi.GetUserAsync("_sit.com_");
         }
-
-
-
-
 
 
     }

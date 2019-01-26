@@ -22,6 +22,7 @@ namespace MailWorker
                  random = new Random();
                  r = random.Next(0,1000000);
                 ic = new ImapClient("imap.mail.ru", login, password, AuthMethods.Login, 993, true, true);
+                
         }
         public string GetMailText(DateTime dt)
         {
