@@ -1,0 +1,5 @@
+E:\Projects\InstagramServicesDesktopWin64\SettingsLibrary\bin\Debug\SettingsLibrary.dll
+E:\Projects\InstagramServicesDesktopWin64\SettingsLibrary\bin\Debug\SettingsLibrary.pdb
+E:\Projects\InstagramServicesDesktopWin64\SettingsLibrary\obj\Debug\SettingsLibrary.csprojResolveAssemblyReference.cache
+E:\Projects\InstagramServicesDesktopWin64\SettingsLibrary\obj\Debug\SettingsLibrary.dll
+E:\Projects\InstagramServicesDesktopWin64\SettingsLibrary\obj\Debug\SettingsLibrary.pdb

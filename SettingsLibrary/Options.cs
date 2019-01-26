@@ -18,7 +18,14 @@ namespace SettingsLibrary
         public static int InstUnsubDeleteCount { get; set; }
         public static int InstUnsubLoadAccount_InMinutes { get; set; }
         public static int SmsRequestDelay { get; set; }
-        public static int LoadAccountDelay_InSeconds { get; set; }
+        public static int LoginAccountDelay_InSeconds { get; set; }
+        public static int InstagramAuthorisationReinitCount { get; set; }
+
+        public static string SmsActivate_LicenseKey { get; set; }
+        public static string CheapSms_LicenseKey { get; set; }
+        public static string VakSms_LicenseKey { get; set; }
+        public static string SimSms_LicenseKey { get; set; }
+        public static string SmsOnline_LicenseKey { get; set; }
 
         public static bool IsSafeAllLogsEnabled { get; set; }
         public static bool IsSafeTokenEnabled { get; set; }

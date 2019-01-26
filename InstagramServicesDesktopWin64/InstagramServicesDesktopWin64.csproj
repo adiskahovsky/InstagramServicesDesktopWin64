@@ -145,6 +145,10 @@
       <Project>{0406eb3d-d2df-43bc-a6d0-4582669c88ac}</Project>
       <Name>MailWorker</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SettingsLibrary\SettingsLibrary.csproj">
+      <Project>{F7477C1A-CA28-41C1-9921-8DE59BE1C552}</Project>
+      <Name>SettingsLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmsLibrary\SmsLibrary.csproj">
       <Project>{c548dcf6-00df-4929-9497-fc91b30a1b48}</Project>
       <Name>SmsLibrary</Name>

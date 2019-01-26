@@ -9,8 +9,7 @@ namespace UserControls
     /// </summary>
     public partial class NumericUpDown : UserControl
     {
-
-        private decimal _valueChanging;
+        private int _valueChanging;
 
         public NumericUpDown()
         {
@@ -25,13 +24,13 @@ namespace UserControls
         static NumericUpDown()
         {
             FrameworkPropertyMetadata propMetadata = new FrameworkPropertyMetadata();
-            propMetadata.DefaultValue = 0m;
+            propMetadata.DefaultValue = 0;
             propMetadata.PropertyChangedCallback = ValueChangedCallback;
 
             ValueProprerty = DependencyProperty.Register
                          (
                              "Value",
-                             typeof(decimal),
+                             typeof(int),
                              typeof(NumericUpDown),
                              propMetadata
                          );
@@ -43,53 +42,59 @@ namespace UserControls
             obj.tbCur_value.Text = obj.Value.ToString();
         }
 
-        #region DECIMAL PLACES
-        public decimal Decimal_Places
+        #region int PLACES
+        public int int_Places
         {
-            get { return (decimal)GetValue(Decimal_PlacesProperty); }
+            get { return (int)GetValue(int_PlacesProperty); }
             set
             {
-                if (value != 0m) _valueChanging = 0.33m;
-                else _valueChanging = 1m;
-                SetValue(Decimal_PlacesProperty, value);
+                SetValue(int_PlacesProperty, value);
             }
         }
 
-        public static readonly DependencyProperty Decimal_PlacesProperty =
-            DependencyProperty.Register("Decimal_Places", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(0.0)
+        public static readonly DependencyProperty int_PlacesProperty =
+            DependencyProperty.Register("int_Places", typeof(int), typeof(NumericUpDown), new PropertyMetadata(0.0)
             {
-                DefaultValue = 0m,
+                DefaultValue = 0,
                 PropertyChangedCallback = PlacesChangedCallback
             });
 
         private static void PlacesChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var obj = (NumericUpDown)d;
-            String.Format($"N{obj.Decimal_Places.ToString()}", obj.tbCur_value);
+            String.Format($"N{obj.int_Places.ToString()}", obj.tbCur_value);
 
         }
         #endregion
 
         #region VALUE
-        public decimal Value
+        public int Value
         {
-            get { return (decimal)GetValue(ValueProprerty); }
+            get { return (int)GetValue(ValueProprerty); }
             set
             {
                 SetValue(ValueProprerty, value);
             }
         }
 
-        private void btnDown_Click(object sender, RoutedEventArgs e)
-        {
-                Value -= _valueChanging;
-        }
-
         private void btnUp_Click(object sender, RoutedEventArgs e)
         {
-                Value += _valueChanging;
+            Value += _valueChanging;
+        }
+
+        private void btnDown_Click(object sender, RoutedEventArgs e)
+        {
+            Value -= _valueChanging;
         }
         #endregion
 
+        private void tbCur_value_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int temp = 0;
+            if (Int32.TryParse(tbCur_value.Text, out temp))
+            {
+                Value = temp;
+            }
+        }
     }
 }

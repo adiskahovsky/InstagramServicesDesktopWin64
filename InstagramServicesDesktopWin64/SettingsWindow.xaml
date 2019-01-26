@@ -97,7 +97,7 @@
                                         <Label Content="Колличество удаляемых:" Margin="10, 0, 10, 0"/>
                                         <Numeric:NumericUpDown Value="1000" x:Name="numdownInstUnsub_DeletedCount"/>
                                     </StackPanel>
-                                    <CheckBox Content="Включить случайную паузу во время выполнения" x:Name="cbRandomSleep_WhileRequest"/>
+                                    <CheckBox Content="Включить случайную паузу во время выполнения" x:Name="cbInstUnsubRandomSleep_WhileRequest"/>
                                     <StackPanel Orientation="Horizontal">
                                         <Label Content="Кол-во действий" Margin="0, 0, 71, 0"/>
                                         <Label Content="от"/>
@@ -109,11 +109,11 @@
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="0, 4, 0 ,4">
                                         <Label Content="Пауза в минутах,"/>
-                                        <Label Content="от" Margin="72, 0, 0, 0" MouseDoubleClick="Label_MouseDoubleClick"  x:Name="numdownInstUnsub_DelayCount"/>
-                                        <Numeric:NumericUpDown MinWidth="55" Value="5"
+                                        <Label Content="от" Margin="72, 0, 0, 0" MouseDoubleClick="Label_MouseDoubleClick"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="5" x:Name="numdownInstUnsub_DelayCountInMinutesFrom"
                                                                IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                         <Label Content="до"/>
-                                        <Numeric:NumericUpDown MinWidth="55" Value="10"
+                                        <Numeric:NumericUpDown MinWidth="55" Value="10" x:Name="numdownInstUnsub_DelayCountInMinutesTo"
                                                                IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
@@ -142,26 +142,26 @@
                                               IsChecked="True" x:Name="cbSmsWithoutProxy"/>
                                     <DockPanel Margin="5, 40, 5, 0">
                                         <CheckBox Content="SmsActivate" Margin="5" DockPanel.Dock="Left" IsEnabled="False"
-                                                  VerticalAlignment="Center" x:Name="cbActibeLicenseKey_SmsActivate"/>
+                                                  VerticalAlignment="Center" x:Name="cbActiveLicenseKey_SmsActivate"/>
                                         <TextBox Width="Auto" Margin="5, 5, 0, 5" x:Name="tbLicenseKey_SmsActivate" IsEnabled="{Binding ElementName=cbActibeLicenseKey_SmsActivate, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="CheapSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_CheapSms"
+                                        <CheckBox Content="CheapSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActiveLicenseKey_CheapSms"
                                                   VerticalAlignment="Center"/>
                                         <TextBox Width="Auto" Margin="16 5, 0, 5" x:Name="tbLicenseKey_CheapSms" IsEnabled="{Binding ElementName=cbActibeLicenseKey_CheapSms, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="VakSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_VakSms" IsEnabled="False"
+                                        <CheckBox Content="VakSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActiveLicenseKey_VakSms" IsEnabled="False"
                                                   VerticalAlignment="Center"/>
                                         <TextBox Width="Auto" Margin="33, 5, 0, 5" x:Name="tbLicenseKey_VakSms" IsEnabled="{Binding ElementName=cbActibeLicenseKey_VakSms, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="SimSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_SimSms"
+                                        <CheckBox Content="SimSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActiveLicenseKey_SimSms"
                                                   VerticalAlignment="Center"/>
                                         <TextBox Width="Auto" Margin="33, 5, 0, 5" x:Name="tbLicenseKey_SimSms" IsEnabled="{Binding ElementName=cbActibeLicenseKey_SimSms, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="Sms-online" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_SmsOnline"
+                                        <CheckBox Content="Sms-online" Margin="5" DockPanel.Dock="Left" x:Name="cbActiveLicenseKey_SmsOnline"
                                                   VerticalAlignment="Center"/>
                                         <TextBox Width="Auto" Margin="12, 5, 0, 5" x:Name="tbLicenseKey_SmsOnline" IsEnabled="{Binding ElementName=cbActibeLicenseKey_SmsOnline, Path=IsChecked}"/>
                                     </DockPanel>
@@ -202,17 +202,17 @@
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="10, 10, 10, 5">
                                             <CheckBox Content="Лайки минимум за"/>
-                                            <Numeric:NumericUpDown Margin="80, 0, 0, 0"/>
+                                            <Numeric:NumericUpDown Margin="80, 0, 0, 0" Value="1"/>
                                             <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="10, 5, 10, 5">
                                             <CheckBox Content="Подписки минимум за"/>
-                                            <Numeric:NumericUpDown Margin="57, 0, 0, 0"/>
+                                            <Numeric:NumericUpDown Margin="57, 0, 0, 0" Value="1"/>
                                             <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="10, 5, 10, 5">
                                             <CheckBox Content="Комментарии минимум за"/>
-                                            <Numeric:NumericUpDown Margin="32, 0, 0, 5"/>
+                                            <Numeric:NumericUpDown Margin="32, 0, 0, 5" Value="1"/>
                                             <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
                                         </StackPanel>
                                     </StackPanel>
@@ -317,14 +317,14 @@
                                     </Grid.RowDefinitions>
                                     <GroupBox Header="Кол-во попыток авторизации Instagram">
                                         <StackPanel HorizontalAlignment="Center" Margin="40">
-                                            <Numeric:NumericUpDown/>
+                                            <Numeric:NumericUpDown x:Name="updownAutorizateTry" Value="3"/>
                                         </StackPanel>
                                     </GroupBox>
                                     <StackPanel Grid.Row="1">
                                         <Label Content="Тайм-аут ожидания смс:"/>
                                         <StackPanel Orientation="Horizontal">
-                                            <Numeric:NumericUpDown Margin="10"/>
-                                            <Label Content="сек." Margin="0, 8, 0, 0"></Label>
+                                            <Numeric:NumericUpDown Margin="10" Value="3"/>
+                                            <Label Content="мин." Margin="0, 8, 0, 0"></Label>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -361,10 +361,144 @@
             <TabItem x:Name="tabletsTab">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
+<<<<<<< HEAD
                         <Rectangle Height="10" Width="10" Fill="Black" />
                         <TextBlock Margin="3">Планшеты</TextBlock>
                     </StackPanel>
                 </TabItem.Header>
+=======
+                        <TextBlock Margin="3">Настройки постинга</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <StackPanel Orientation="Horizontal">
+                    <GroupBox Margin="5">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Задержка между публикацией постов: " Margin="5"/>
+                                    <Numeric:NumericUpDown Margin="5" x:Name="updownPostPublicationDelay" Value="1"/>
+                                    <Label Content=".сек" Margin="5"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Количество постов: " Margin="5"/>
+                                    <Numeric:NumericUpDown Margin="5" x:Name="updownPostsCount" Value="8"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Задержка между концов и началом на следующий аккаунт: "></Label>
+                                    <Numeric:NumericUpDown Margin="5" x:Name="updownDelayBeginEnd"/>
+                                    <Label Content=".сек"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <RadioButton Content="С удалением залитых фоток " Margin="5" IsChecked="True" x:Name="rbtnWithPhotoDeletion"/>
+                                    <RadioButton Content="Без удаления залитых фоток " Margin="5" x:Name="rbtnWithoutPhotoDeletion"/>
+                                </StackPanel>
+                                <CheckBox Content="Заливать аватары" Margin="10" x:Name="cbLoadAvatars"/>
+                                <CheckBox Content="Заливать только аватары без постов" Margin="10" x:Name="cbLoadAvatarsOnly"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <GroupBox Header="Папка с фотками" Margin="10">
+                                        <DockPanel >
+                                            <TextBox Width="Auto" MinWidth="200" Margin="10" IsReadOnly="True" x:Name="tbPhotoFolder"/>
+                                            <Button Content="Обзор" Margin="10" x:Name="btnFindPhotoFolder"/>
+                                        </DockPanel>
+                                    </GroupBox>
+                                    <GroupBox Header="Файл с комментариями" Margin="10">
+                                        <DockPanel >
+                                            <TextBox Width="Auto" MinWidth="200" Margin="10" IsReadOnly="True" x:Name="tbCommentFolder"/>
+                                            <Button Content="Обзор" Margin="10" x:Name="btnFindCommentFile"/>
+                                        </DockPanel>
+                                    </GroupBox>
+
+                                </StackPanel>
+
+
+                                <StackPanel Orientation="Horizontal">
+                                    <GroupBox Header="Настройки проверки аккаунтов" Margin="10">
+                                        <StackPanel>
+                                            <CheckBox Content="Включить выключить" Margin="5"></CheckBox>
+                                            <DockPanel>
+                                                <Label Content="Интервал проверки: " Margin="5"></Label>
+                                                <Numeric:NumericUpDown Margin="5" Value="30"/>
+                                                <Label Content=".сек" Margin="5"></Label>
+                                            </DockPanel>
+                                        </StackPanel>
+                                    </GroupBox>
+
+                                    <GroupBox Header="Прокси" Margin="10">
+                                        <StackPanel>
+                                            <Label Content="Обход со сменой прокси: " Margin="5"></Label>
+                                            <CheckBox Content="Включить/Выключить" Margin="5"></CheckBox>
+                                            <Label Content="Запросы в Like4u Без прокси: " Margin="5"></Label>
+                                            <CheckBox Content="Включить/Выключить" Margin="5"></CheckBox>
+
+                                        </StackPanel>
+
+                                    </GroupBox>
+
+                                </StackPanel>
+
+                                <GroupBox Header="Количество попыток входа">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Попыток" Margin="5"/>
+                                        <Numeric:NumericUpDown Margin="5" Value="3"/>
+                                        <Label Content=".кол" Margin="5"/>
+                                    </StackPanel>
+
+
+
+                                </GroupBox>
+
+                            </StackPanel>
+
+                        </StackPanel>
+                    </GroupBox>
+
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <GroupBox  Header="Браузер" Margin="5" MaxHeight="100"  >
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBox Margin="5" MinWidth="200"></TextBox>
+                                <Button Content="Обзор"></Button>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="Автозапуск всех аккаунтов" Grid.Column="1">
+                            <StackPanel>
+                                <CheckBox Content="Автозапуск всех аккаунтов" Margin="5"></CheckBox>
+                                <StackPanel Orientation="Vertical">
+                                    <Label Content="Запустить через:"></Label>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Numeric:NumericUpDown Value="30" Margin="60, 0, 0, 0"/>
+                                        <Label Content="сек"/>
+                                    </StackPanel>
+                                    <Label Content="после запуска программы"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal">
+                            <Label Content="Задержка между изменением пароля и попыткой авторизации после этого: "></Label>
+                            <Numeric:NumericUpDown Value="60"></Numeric:NumericUpDown>
+                        </StackPanel>
+
+
+                    </Grid>
+
+                </StackPanel>
+>>>>>>> 4a618c6... First stage SettingsWindow work start without PostSettings
             </TabItem>
         </TabControl>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1">

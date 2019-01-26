@@ -112,8 +112,13 @@ E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debu
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\AE.Net.Mail.pdb
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\obj\Debug\InstagramTest.baml
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\WebDriver.dll
 E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\WebDriver.xml
 =======
 >>>>>>> a01e71e... SMS services update
+=======
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\SettingsLibrary.dll
+E:\Projects\InstagramServicesDesktopWin64\InstagramServicesDesktopWin64\bin\Debug\SettingsLibrary.pdb
+>>>>>>> 4a618c6... First stage SettingsWindow work start without PostSettings
