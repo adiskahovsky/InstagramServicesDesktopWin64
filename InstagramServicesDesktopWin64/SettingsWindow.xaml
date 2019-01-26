@@ -1,4 +1,4 @@
-﻿<Window x:Class="LikeProg.MainWindow"
+﻿<Window x:Class="LikeProg.SettingsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LikeProg"
         xmlns:Numeric="clr-namespace:UserControls;assembly=UserControls"
         mc:Ignorable="d"
-        Title="Настройки" Height="700" Width="1500">
+        Title="Настройки" Height="730" Width="1500" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Numeric:NumericUpDown x:Key="NumericUpDown"/>
         <Style TargetType="{x:Type Control}" x:Key="baseStyle">
@@ -25,7 +25,15 @@
         <Style TargetType="Numeric:NumericUpDown" BasedOn="{StaticResource MinNumericWidth}"/>
     </Window.Resources>
     <Grid>
+<<<<<<< HEAD
         <TabControl Margin="5">
+=======
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.95*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="products" Margin="5">
+>>>>>>> d6f5b8f... settings class
             <TabItem>
                 <TabItem.Header>
                     <Label>Настройки</Label>
@@ -46,7 +54,7 @@
 
                             <GroupBox Grid.Column="0" Header="Задержка отправки запросов Like4u">
                                 <StackPanel>
-                                    <StackPanel Orientation="Horizontal" Margin="5, 10, 5, 5">
+                                    <StackPanel Orientation="Horizontal" Margin="4,10,6,5">
                                         <Label Content="Задержки на получение задания:"/>
                                         <Numeric:NumericUpDown Value="5"/>
                                         <Label Content="сек."/>
@@ -81,33 +89,37 @@
                                     <Label Content="Задержка в сек между действиями:" HorizontalAlignment="Center"/>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                         <Label Content="от" Margin="10, 0, 10, 0"/>
-                                        <Numeric:NumericUpDown HorizontalAlignment="Left" Value="50"/>
+                                        <Numeric:NumericUpDown HorizontalAlignment="Left" Value="50" x:Name="numdownInstUnsub_RequestDelayFrom"/>
                                         <Label Content="до" Margin="33, 0, 10, 0"/>
-                                        <Numeric:NumericUpDown Value="120"/>
+                                        <Numeric:NumericUpDown Value="120" x:Name="numdownInstUnsub_RequestDelayTO"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="0, 1, 0, 0">
                                         <Label Content="Колличество удаляемых:" Margin="10, 0, 10, 0"/>
-                                        <Numeric:NumericUpDown Value="10000"/>
+                                        <Numeric:NumericUpDown Value="1000" x:Name="numdownInstUnsub_DeletedCount"/>
                                     </StackPanel>
-                                    <CheckBox Content="Включить случайную паузу во время выполнения"
-                                          IsChecked="True"/>
+                                    <CheckBox Content="Включить случайную паузу во время выполнения" x:Name="cbRandomSleep_WhileRequest"/>
                                     <StackPanel Orientation="Horizontal">
                                         <Label Content="Кол-во действий" Margin="0, 0, 71, 0"/>
                                         <Label Content="от"/>
-                                        <Numeric:NumericUpDown MinWidth="55" Value="200"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="200" x:Name="numdownInstUnsub_RequestCountFrom"
+                                                               IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                         <Label Content="до"/>
-                                        <Numeric:NumericUpDown MinWidth="55" Value="205"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="205" x:Name="numdownInstUnsub_RequestCountTo"
+                                                               IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="0, 4, 0 ,4">
                                         <Label Content="Пауза в минутах,"/>
-                                        <Label Content="от" Margin="72, 0, 0, 0" MouseDoubleClick="Label_MouseDoubleClick" />
-                                        <Numeric:NumericUpDown MinWidth="55" Value="5"/>
+                                        <Label Content="от" Margin="72, 0, 0, 0" MouseDoubleClick="Label_MouseDoubleClick"  x:Name="numdownInstUnsub_DelayCount"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="5"
+                                                               IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                         <Label Content="до"/>
-                                        <Numeric:NumericUpDown MinWidth="55" Value="10"/>
+                                        <Numeric:NumericUpDown MinWidth="55" Value="10"
+                                                               IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <Label Content="Пауза между зап. аккаунтов: "/>
-                                        <Numeric:NumericUpDown Value="1" Margin="13, 0, 0, 0"></Numeric:NumericUpDown>
+                                        <Numeric:NumericUpDown Value="1" Margin="13, 0, 0, 0" x:Name="numdownInstUnsub_DelayLoginRequestInMinutes"
+                                                               IsEnabled="{Binding ElementName=cbRandomSleep_WhileRequest, Path=IsChecked}"/>
                                     </StackPanel>
                                 </StackPanel>
                             </GroupBox>
@@ -120,55 +132,55 @@
                             </Grid.RowDefinitions>
                             <GroupBox Header="Способ работы с Instagram" Margin="5, 0, 5, 0">
                                 <StackPanel Margin="5">
-                                    <RadioButton Content="Через веб-версию instagram.com" Margin="5, 10, 0, 5" IsChecked="True"/>
-                                    <RadioButton Content="Через приложение Instagram под Android" Margin="5, 0, 5, 0"/>
+                                    <RadioButton Content="Через веб-версию instagram.com" Margin="5, 10, 0, 5" IsChecked="True" x:Name="rbtnLoginHTTPBrowser"/>
+                                    <RadioButton Content="Через приложение Instagram под Android" Margin="5, 0, 5, 0" x:Name="rbtnLoginHTTPAndroid"/>
                                 </StackPanel>
                             </GroupBox>
                             <GroupBox Grid.Row="1" Header="Настройки сервисов СМС" Margin="5, 25, 5, 0">
                                 <StackPanel>
                                     <CheckBox Content="СМС сервисы без прокси" Margin="0, 10, 0, 0" HorizontalAlignment="Center"
-                                              IsChecked="True"/>
+                                              IsChecked="True" x:Name="cbSmsWithoutProxy"/>
                                     <DockPanel Margin="5, 40, 5, 0">
-                                        <CheckBox Content="SmsActivate" Margin="5" DockPanel.Dock="Left"
-                                                  VerticalAlignment="Center"/>
-                                        <TextBox Width="Auto" Margin="5, 5, 0, 5"/>
+                                        <CheckBox Content="SmsActivate" Margin="5" DockPanel.Dock="Left" IsEnabled="False"
+                                                  VerticalAlignment="Center" x:Name="cbActibeLicenseKey_SmsActivate"/>
+                                        <TextBox Width="Auto" Margin="5, 5, 0, 5" x:Name="tbLicenseKey_SmsActivate" IsEnabled="{Binding ElementName=cbActibeLicenseKey_SmsActivate, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="CheapSms" Margin="5" DockPanel.Dock="Left"
+                                        <CheckBox Content="CheapSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_CheapSms"
                                                   VerticalAlignment="Center"/>
-                                        <TextBox Width="Auto" Margin="16 5, 0, 5"/>
+                                        <TextBox Width="Auto" Margin="16 5, 0, 5" x:Name="tbLicenseKey_CheapSms" IsEnabled="{Binding ElementName=cbActibeLicenseKey_CheapSms, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="VakSms" Margin="5" DockPanel.Dock="Left"
+                                        <CheckBox Content="VakSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_VakSms" IsEnabled="False"
                                                   VerticalAlignment="Center"/>
-                                        <TextBox Width="Auto" Margin="33, 5, 0, 5"/>
+                                        <TextBox Width="Auto" Margin="33, 5, 0, 5" x:Name="tbLicenseKey_VakSms" IsEnabled="{Binding ElementName=cbActibeLicenseKey_VakSms, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="SimSms" Margin="5" DockPanel.Dock="Left"
+                                        <CheckBox Content="SimSms" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_SimSms"
                                                   VerticalAlignment="Center"/>
-                                        <TextBox Width="Auto" Margin="33, 5, 0, 5"/>
+                                        <TextBox Width="Auto" Margin="33, 5, 0, 5" x:Name="tbLicenseKey_SimSms" IsEnabled="{Binding ElementName=cbActibeLicenseKey_SimSms, Path=IsChecked}"/>
                                     </DockPanel>
                                     <DockPanel Margin="5, 0, 5, 0">
-                                        <CheckBox Content="Sms-online" Margin="5" DockPanel.Dock="Left"
+                                        <CheckBox Content="Sms-online" Margin="5" DockPanel.Dock="Left" x:Name="cbActibeLicenseKey_SmsOnline"
                                                   VerticalAlignment="Center"/>
-                                        <TextBox Width="Auto" Margin="12, 5, 0, 5"/>
+                                        <TextBox Width="Auto" Margin="12, 5, 0, 5" x:Name="tbLicenseKey_SmsOnline" IsEnabled="{Binding ElementName=cbActibeLicenseKey_SmsOnline, Path=IsChecked}"/>
                                     </DockPanel>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
                                         <Label Content="Пауза между запросами" HorizontalAlignment="Center"/>
-                                        <Numeric:NumericUpDown/>
+                                        <Numeric:NumericUpDown Margin="0, 0, 0, 5" x:Name="updownRequestSmsDelay"/>
                                         <Label Content="сек."/>
                                     </StackPanel>
                                 </StackPanel>
                             </GroupBox>
                             <StackPanel Grid.Row="2">
-                                <CheckBox Content="Записывать лог каждого аккаунта" Margin="5"/>
-                                <CheckBox Content="Сохранять токены в файл token.txt" Margin="5"/>
-                                <CheckBox Content="Не выводить лог действий" Margin="5"/>
-                                <CheckBox Content="Подробный лог" Margin="5"/>
+                                <CheckBox Content="Записывать лог каждого аккаунта" Margin="5" x:Name="cbSaveAllLogs"/>
+                                <CheckBox Content="Сохранять токены в файл token.txt" Margin="5" x:Name="cbSaveTokenToFiles"/>
+                                <CheckBox Content="Не выводить лог действий" Margin="5" x:Name="cbDisableLogShow"/>
+                                <CheckBox Content="Подробный лог" Margin="5" x:Name="cbDetailedLog"/>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="Пауза между запуском аккаунтов"/>
-                                    <Numeric:NumericUpDown/>
-                                    <Label Content="сек." Margin="5, 0, 0, 0"></Label>
+                                    <Numeric:NumericUpDown x:Name="updownAccountLoginDelay"/>
+                                    <Label Content="сек." Margin="5, 0, 0, 0"/>
                                 </StackPanel>
                             </StackPanel>
                         </Grid>
@@ -200,7 +212,7 @@
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="10, 5, 10, 5">
                                             <CheckBox Content="Комментарии минимум за"/>
-                                            <Numeric:NumericUpDown Margin="32, 0, 0, 0"/>
+                                            <Numeric:NumericUpDown Margin="32, 0, 0, 5"/>
                                             <Label Content="бал(ы)" Margin="5, 0, 0, 0"/>
                                         </StackPanel>
                                     </StackPanel>
@@ -215,7 +227,7 @@
                                                         <ColumnDefinition Width="150*"/>
                                                         <ColumnDefinition Width="100*"/>
                                                     </Grid.ColumnDefinitions>
-                                                    <StackPanel Grid.Column="0">
+                                                    <StackPanel Grid.Column="0" x:Name="stackPanel_SimSms__1">
                                                         <CheckBox Content="ES" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="ID" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="KZ" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
@@ -227,7 +239,7 @@
                                                         <CheckBox Content="LV" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="EE" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                     </StackPanel>
-                                                    <StackPanel Grid.Column="1">
+                                                    <StackPanel Grid.Column="1" x:Name="stackPanel_SimSms__2">
                                                         <CheckBox Content="VN" FontWeight="Bold" Margin="5, 5, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="IL" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="CN2" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
@@ -239,7 +251,7 @@
                                                         <CheckBox Content="NL" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="PY" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                     </StackPanel>
-                                                    <StackPanel Grid.Column="2">
+                                                    <StackPanel Grid.Column="2" x:Name="stackPanel_SimSms__3">
                                                         <CheckBox Content="PL" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="KG" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
                                                         <CheckBox Content="LT" FontWeight="Bold" Margin="5, 3, 0, 0" FontSize="16"/>
@@ -294,7 +306,7 @@
                                 <Grid Grid.Column="1">
                                     <GroupBox Header="Кол-во попыто авторизации Like4u">
                                         <StackPanel HorizontalAlignment="Center" Margin="45">
-                                            <Numeric:NumericUpDown/>
+                                            <Numeric:NumericUpDown Margin="0, 0, 0, 5"/>
                                         </StackPanel>
                                     </GroupBox>
                                 </Grid>
@@ -355,5 +367,9 @@
                 </TabItem.Header>
             </TabItem>
         </TabControl>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1">
+            <Button Content="Сохранить" x:Name="btnSaveSetingsChanges" Margin="5, 6, 15, 5" Padding="2" Click="btnSaveSetingsChanges_Click"/>
+            <Button Content="Отмена" x:Name="btnCancelSetingsChanges" Margin="5, 6, 15, 5" Padding="2" Click="btnCancelSetingsChanges_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

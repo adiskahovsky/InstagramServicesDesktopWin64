@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailWorker", "MailWorker\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsLibrary", "SmsLibrary\SmsLibrary.csproj", "{C548DCF6-00DF-4929-9497-FC91B30A1B48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsLibrary", "SettingsLibrary\SettingsLibrary.csproj", "{F7477C1A-CA28-41C1-9921-8DE59BE1C552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,7 +51,14 @@ Global
 		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C548DCF6-00DF-4929-9497-FC91B30A1B48}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 >>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
+=======
+		{F7477C1A-CA28-41C1-9921-8DE59BE1C552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7477C1A-CA28-41C1-9921-8DE59BE1C552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7477C1A-CA28-41C1-9921-8DE59BE1C552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7477C1A-CA28-41C1-9921-8DE59BE1C552}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> d6f5b8f... settings class
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

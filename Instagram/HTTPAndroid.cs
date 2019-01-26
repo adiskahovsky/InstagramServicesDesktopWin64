@@ -5,6 +5,7 @@ using InstaSharper.Classes;
 using InstaSharper.Classes.Models;
 using InstaSharper.Classes.ResponseWrappers;
 using InstaSharper.Logger;
+using MailWorker;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -12,78 +13,83 @@ using System.Threading.Tasks;
 
 namespace InstagramServicesDesktopWin64
 {
-    public class HTTPAndroid:IInstagram 
+    public class HTTPAndroid : IInstagram
     {
 
-        string _login;string _password;string _ip;int _port;string _proxyLogin;string _proxyPassword;
-        
+        private string _ip;
+        public string ip
+        {
+            get { return _ip; }
+            set { _ip = value; }
+        }
+
+        private int _port;
+        public int port
+        {
+            get { return _port; }
+            set { _port = value; }
+        }
+
+        private string _proxyUserName;
+        public string ProxyUserName
+        {
+            get { return _proxyUserName; }
+            set { _proxyUserName = value; }
+        }
+
+        private string _proxyPassword;
+        public string ProxyPassword
+        {
+            get { return _proxyPassword; }
+            set { _proxyPassword = value; }
+        }
+
+        private string _username;
+        public string UserName
+        {
+            get { return _username; }
+            set { _username = value; }
+        }
+
+        private string _password;
+        public string Password
+        {
+            get { return _password; }
+            set { _password = value; }
+        }
+
+
         private IInstaApi _instaApi;
         public IInstaApi InstaApi
         { get { return _instaApi; } }
-        private IResult<InstaResetChallenge> result2;
+        private Mail _mail;
+        public Mail mail { get { return _mail; } set { _mail = value; } }
 
-        public HTTPAndroid(string login,string password,string ip,int port,string proxyLogin,string proxyPassword)
-        {
-            _login = login;
-            _password = password;
-            _ip = ip;
-            _port = port;
-            _proxyLogin = proxyLogin;
-            _proxyPassword = proxyPassword;
-        }
+        public HTTPAndroid()
+        {        }
+
         public async Task<IResult<InstaLoginResult>> Login()
         {
-
             var userSession = new UserSessionData
             {
-                
-                UserName = _login,
+                UserName = _username,
                 Password = _password
-                
-               
             };
             var httpHandler = new HttpClientHandler();
             //test125:As158233@185.195.25.241:42343
             WebProxy wp = new WebProxy(_ip, _port);
-            wp.Credentials = new NetworkCredential(_proxyLogin, _proxyPassword);
+            wp.Credentials = new NetworkCredential(_proxyUserName, _proxyPassword);
             httpHandler.Proxy = wp; //"178.124.152.84", 46854 17t3080724:KJLDdrcde9@91.227.155.166:7951
             var delay = RequestDelay.FromSeconds(1, 1);
-            
+
             _instaApi = InstaApiBuilder.CreateBuilder()
                 .SetUser(userSession)
-                .UseLogger(new DebugLogger(LogLevel.Exceptions)) 
+                .UseLogger(new DebugLogger(LogLevel.Exceptions))
                 .SetRequestDelay(delay)
                 .UseHttpClientHandler(httpHandler)
                 .Build();
-
-
-             
-            return await  _instaApi.LoginAsync();
-
-
-
-
-
-
-
-          //  var res = await _instaApi.ChooseVerifyMethod(0);
-
-            //result2 = await _instaApi.ResetChallenge();
-
-           // var res2 = await _instaApi.SendVerifyCode("384296");
-
-            //  result2.Value.StepData.FbAccessToken = "1474196902.65cde3b.a64eb27a579a49258b237afd6343e749";
-            //result2.Value.StepData.Email = "micklewillwill911@gmail.com";
-            //result2.Value.StepData.PhoneNumber = "+375297807148";
-
-
-
-           // return await _instaApi.GetUserAsync("_sit.com_");
-        }
-
-        public Task<IResult<InstaUser>> Verify(string code)
-        {
-            throw new NotImplementedException();
+            
+            return await _instaApi.LoginAsync();
         }
     }
 }

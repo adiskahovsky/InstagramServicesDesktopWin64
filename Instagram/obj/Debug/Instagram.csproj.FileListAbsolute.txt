@@ -21,3 +21,13 @@ E:\Projects\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.dll
 E:\Projects\InstagramServicesDesktopWin64\Instagram\obj\Debug\Instagram.pdb
 E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\WebDriver.dll
 E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\WebDriver.xml
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\MailWorker.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\AE.Net.Mail.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\HtmlAgilityPack.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\ActiveUp.Net.Imap4.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\ActiveUp.Net.Common.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\ActiveUp.Net.Dns.dll
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\MailWorker.pdb
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\AE.Net.Mail.pdb
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\HtmlAgilityPack.pdb
+E:\Projects\InstagramServicesDesktopWin64\Instagram\bin\Debug\HtmlAgilityPack.xml

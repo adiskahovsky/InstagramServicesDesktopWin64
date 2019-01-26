@@ -2,7 +2,11 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:InstagramServicesDesktopWin64"
+<<<<<<< HEAD
              StartupUri="TestWindow.xaml">
+=======
+             StartupUri="MainWindow.xaml">
+>>>>>>> d6f5b8f... settings class
     <Application.Resources>
          
     </Application.Resources>

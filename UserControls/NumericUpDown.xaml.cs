@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UserControls
 {
@@ -22,77 +10,86 @@ namespace UserControls
     public partial class NumericUpDown : UserControl
     {
 
-        private decimal _value;
+        private decimal _valueChanging;
 
-        public decimal Value
-        {
-            get { return _value; }
-            set { _value = value; }
-        }
-
-
-        int minvalue = 0,
-            maxvalue = 100,
-            startvalue = 10;
         public NumericUpDown()
         {
             InitializeComponent();
-            NUDTextBox.Text = startvalue.ToString();
+            tbCur_value.Text = Value.ToString();
+            Value = 10;
+            _valueChanging = 1;
         }
 
-        private void NUDButtonUP_Click(object sender, RoutedEventArgs e)
+        public static DependencyProperty ValueProprerty;
+
+        static NumericUpDown()
         {
-            int number;
-            if (NUDTextBox.Text != "") number = Convert.ToInt32(NUDTextBox.Text);
-            else number = 0;
-            if (number < maxvalue)
-                NUDTextBox.Text = Convert.ToString(number + 1);
+            FrameworkPropertyMetadata propMetadata = new FrameworkPropertyMetadata();
+            propMetadata.DefaultValue = 0m;
+            propMetadata.PropertyChangedCallback = ValueChangedCallback;
+
+            ValueProprerty = DependencyProperty.Register
+                         (
+                             "Value",
+                             typeof(decimal),
+                             typeof(NumericUpDown),
+                             propMetadata
+                         );
         }
 
-        private void NUDButtonDown_Click(object sender, RoutedEventArgs e)
+        private static void ValueChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            int number;
-            if (NUDTextBox.Text != "") number = Convert.ToInt32(NUDTextBox.Text);
-            else number = 0;
-            if (number > minvalue)
-                NUDTextBox.Text = Convert.ToString(number - 1);
+            var obj = (NumericUpDown)d;
+            obj.tbCur_value.Text = obj.Value.ToString();
         }
 
-        private void NUDTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        #region DECIMAL PLACES
+        public decimal Decimal_Places
         {
-
-            if (e.Key == Key.Up)
+            get { return (decimal)GetValue(Decimal_PlacesProperty); }
+            set
             {
-                NUDButtonUP.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                typeof(Button).GetMethod("set_IsPressed", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(NUDButtonUP, new object[] { true });
+                if (value != 0m) _valueChanging = 0.33m;
+                else _valueChanging = 1m;
+                SetValue(Decimal_PlacesProperty, value);
             }
+        }
 
-
-            if (e.Key == Key.Down)
+        public static readonly DependencyProperty Decimal_PlacesProperty =
+            DependencyProperty.Register("Decimal_Places", typeof(decimal), typeof(NumericUpDown), new PropertyMetadata(0.0)
             {
-                NUDButtonDown.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                typeof(Button).GetMethod("set_IsPressed", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(NUDButtonDown, new object[] { true });
+                DefaultValue = 0m,
+                PropertyChangedCallback = PlacesChangedCallback
+            });
+
+        private static void PlacesChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var obj = (NumericUpDown)d;
+            String.Format($"N{obj.Decimal_Places.ToString()}", obj.tbCur_value);
+
+        }
+        #endregion
+
+        #region VALUE
+        public decimal Value
+        {
+            get { return (decimal)GetValue(ValueProprerty); }
+            set
+            {
+                SetValue(ValueProprerty, value);
             }
         }
 
-        private void NUDTextBox_PreviewKeyUp(object sender, KeyEventArgs e)
+        private void btnDown_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.Up)
-                typeof(Button).GetMethod("set_IsPressed", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(NUDButtonUP, new object[] { false });
-
-            if (e.Key == Key.Down)
-                typeof(Button).GetMethod("set_IsPressed", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(NUDButtonDown, new object[] { false });
+                Value -= _valueChanging;
         }
 
-        private void NUDTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void btnUp_Click(object sender, RoutedEventArgs e)
         {
-            int number = 0;
-            if (NUDTextBox.Text != "")
-                if (!int.TryParse(NUDTextBox.Text, out number)) NUDTextBox.Text = startvalue.ToString();
-            if (number > maxvalue) NUDTextBox.Text = maxvalue.ToString();
-            if (number < minvalue) NUDTextBox.Text = minvalue.ToString();
-            NUDTextBox.SelectionStart = NUDTextBox.Text.Length;
-
+                Value += _valueChanging;
         }
+        #endregion
+
     }
 }

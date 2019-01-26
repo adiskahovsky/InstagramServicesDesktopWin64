@@ -25,6 +25,7 @@ namespace InstagramServicesDesktopWin64
     public partial class InstagramTest : Window
     {
         List<IInstagram> users;
+        SmsOnline sms;
         public InstagramTest()
         {
             users = new List<IInstagram>();
@@ -45,31 +46,44 @@ namespace InstagramServicesDesktopWin64
             var result = await users[0].Login();
 
 
-            SmsOnline sms = new SmsOnline();
-            string number = sms.GetNumber(new List<string>());
-            
+            sms = new SmsOnline();
+            string number = sms.GetNumber(new List<string>() { "24", "68" });
+
             //changeNumber request
-            
-            await users[0].Verify(sms.GetSms());            
-        }
-
-        private void Like_Click(object sender, RoutedEventArgs e)
-        {
 
         }
 
-        private void Comment_Click(object sender, RoutedEventArgs e)
+        private async void Like_Click(object sender, RoutedEventArgs e)
         {
-            CheapSms sms = new CheapSms() { Proxy = ProxyParse.Parse("17t3080724:KJLDdrcde9@91.227.155.166:7951")};
-            if (sms.GetNumberCount() > 0)
+        }
+
+        private async void Comment_Click(object sender, RoutedEventArgs e)
+        {
+            //CheapSms sms = new CheapSms() { Proxy = ProxyParse.Parse("17t3080724:KJLDdrcde9@91.227.155.166:7951") };
+            //if (sms.GetNumberCount() > 0)
+            //{
+            //    string number = sms.GetNumber();
+            //}
+
+
+            users.Add(new HTTPBrowser()
             {
-                string number = sms.GetNumber();
-            }        
+                UserName = "KajigisMarlowe",
+                Password = "ayOaKoTc336Q",
+                ProxyDictionary = ProxyParse.Parse("17t3080724:KJLDdrcde9@91.227.155.166:7951")
+            });
+
+            sms = new SmsOnline() { Proxy = ProxyParse.Parse("17t3080724:KJLDdrcde9@91.227.155.166:7951") };
+            string number = sms.GetNumber(new List<string>() { "24", "68" });
+
+            await users[0].Login();
+            
         }
 
-        private void Subscribe_Click(object sender, RoutedEventArgs e)
+        private async void Subscribe_Click(object sender, RoutedEventArgs e)
         {
 
+            //var result = await users[0].Verify(sms.GetSms());
         }
 
         private void RequestSms(object sender, RoutedEventArgs e)

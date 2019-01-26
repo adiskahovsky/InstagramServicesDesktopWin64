@@ -74,9 +74,18 @@
     <Compile Include="Serializer.cs" />
 >>>>>>> 075896b... Creating smsOnline class  selenium changing number(uncorrect)
     <Compile Include="SettingsWindow.xaml.cs" />
+<<<<<<< HEAD
     <Compile Include="TestWindow.xaml.cs">
       <DependentUpon>TestWindow.xaml</DependentUpon>
     </Compile>
+=======
+    <Compile Include="ShowCollection.cs" />
+    <Compile Include="UsersParse.cs" />
+    <Page Include="InstagramTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> d6f5b8f... settings class
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

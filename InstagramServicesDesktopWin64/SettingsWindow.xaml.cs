@@ -18,9 +18,9 @@ namespace LikeProg
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SettingsWindow : Window
     {
-        public MainWindow()
+        public SettingsWindow()
         {
             InitializeComponent();
         }
@@ -40,13 +40,60 @@ namespace LikeProg
                 if (chkBox.IsEnabled == true)                
                     tags.Add(chkBox.Tag.ToString());                
             }
+            return tags;
+        }
+
+
+        private List<string> GetSimSmsCountries()
+        {
+            List<string> tags = new List<string>();
+            var children = LogicalTreeHelper.GetChildren(stackPanel_SimSms__1);
+
+            foreach (var box in children)
+            {
+                var chkBox = box as CheckBox;
+                if (chkBox.IsEnabled == true)
+                    tags.Add(chkBox.Tag.ToString());
+            }
+
+
+            var children1 = LogicalTreeHelper.GetChildren(stackPanel_SimSms__1);
+
+            foreach (var box in children1)
+            {
+                var chkBox = box as CheckBox;
+                if (chkBox.IsEnabled == true)
+                    tags.Add(chkBox.Tag.ToString());
+            }
+
+
+            var children2 = LogicalTreeHelper.GetChildren(stackPanel_SimSms__3);
+
+            foreach (var box in children2)
+            {
+                var chkBox = box as CheckBox;
+                if (chkBox.IsEnabled == true)
+                    tags.Add(chkBox.Tag.ToString());
+            }
 
             return tags;
         }
 
+<<<<<<< HEAD
         private void ScrollBar_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
         {
 
         }
+=======
+        private void btnSaveSetingsChanges_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancelSetingsChanges_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+>>>>>>> d6f5b8f... settings class
     }
 }

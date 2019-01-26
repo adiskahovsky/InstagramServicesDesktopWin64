@@ -33,18 +33,20 @@ namespace SmsLibrary
         public string GetNumber(List<string> countries)
         {
             string randomCountry = countries[Randomer.Next(countries.Count)];
-            HttpWebRequest webRequest = WebRequest.Create($"https://sms-online.pro/api/orders/create/{randomCountry}?api_token={_apiToken}")
+            HttpWebRequest webRequest = WebRequest.Create($"https://sms-online.pro/api/orders/create/24?api_token={_apiToken}")
                             as HttpWebRequest;
             if (webRequest == null)
                 return null;
 
             //TODO: Check available numbers for country
 
-            WebProxy wp = new WebProxy(_proxy["ip"], Int32.Parse(_proxy["port"]));
-            wp.Credentials = new NetworkCredential(_proxy["username"], _proxy["password"]);
+            WebProxy wp = new WebProxy("91.227.155.45", 7951)
+            {
+                Credentials = new NetworkCredential("17t3080724", "KJLDdrcde9")
+            };
 
-            webRequest.Proxy = wp;
             webRequest.ContentType = "application/json";
+            webRequest.Proxy = wp;
 
             using (var s = webRequest.GetResponse().GetResponseStream())
             {
@@ -57,7 +59,7 @@ namespace SmsLibrary
                     while (CheckStatus(contr.data.id).data.state == "awaiting_phone")
                     {
                         CheckStatus(contr.data.id);
-                        Thread.Sleep(8000);
+                        Thread.Sleep(3000);
                     }
                     s.Close();
                     sr.Close();

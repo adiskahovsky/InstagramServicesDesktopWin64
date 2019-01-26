@@ -34,7 +34,11 @@ namespace SmsLibrary
 
             if (webRequest == null)
                 return -1;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> d6f5b8f... settings class
             WebProxy wp = new WebProxy(_proxy["ip"], Int32.Parse(_proxy["port"]));
             wp.Credentials = new NetworkCredential(_proxy["username"], _proxy["password"]);
 
