@@ -4,3 +4,8 @@ D:\WorkSpaceC#\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.csp
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.csproj.CoreCompileInputs.cache
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.dll
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.pdb
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\LogLibrary\bin\Debug\LogLibrary.dll
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\LogLibrary\bin\Debug\LogLibrary.pdb
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.csprojResolveAssemblyReference.cache
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.dll
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\LogLibrary\obj\Debug\LogLibrary.pdb

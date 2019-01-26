@@ -6,7 +6,7 @@
         xmlns:US="clr-namespace:UserControls;assembly=UserControls"
         xmlns:local="clr-namespace:InstagramServicesDesktopWin64"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="MainWindow" Height="815" Width="1255" MaxHeight="830" WindowStartupLocation="CenterScreen">
     <TabControl>
         <TabItem>
             <Grid>
@@ -18,13 +18,15 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-
                 <Grid Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <DataGrid Margin="5" x:Name="dgMain" AutoGenerateColumns="False" LoadingRow="dgMain_LoadingRow">
+                    <DataGrid Margin="5" x:Name="dgMain"
+                      AutoGenerateColumns="False"
+                      LoadingRow="dgMain_LoadingRow"
+                      IsReadOnly="True" MaxHeight="380">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="№" Binding="{Binding RowNumber}" MaxWidth="35"/>
                             <DataGridTextColumn Header="Логин" Binding="{Binding Login}" />
@@ -43,8 +45,8 @@
                             <DataGridTextColumn Header="Коэфф. качества" Binding="{Binding Accuracy}" />
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Border Grid.Row="1" Grid.Column="0" BorderThickness="2" BorderBrush="Gray" Margin="5">
-                        <TextBlock x:Name="tbLogs" Background="WhiteSmoke"/>
+                    <Border Grid.Row="1" Grid.Column="0" BorderThickness="2" BorderBrush="Gray" MaxHeight="330" Margin="5,-38,0,5">
+                        <TextBlock x:Name="tbLogs" Background="WhiteSmoke" MaxHeight="330" Margin="0,0,0,0"/>
                     </Border>
                 </Grid>
                 <StackPanel Grid.Column="1" Grid.Row="0" >
@@ -61,28 +63,19 @@
                             <Button Content="Открыть в браузере" Margin="5"></Button>
                         </StackPanel>
                     </GroupBox>
-
-
                     <StackPanel Margin="5">
-
                         <GroupBox Header="Задержка в секундах">
                             <StackPanel Margin="5">
-
                                 <StackPanel Orientation="Horizontal" Margin="5">
                                     <Label Content="От"></Label>
                                     <US:NumericUpDown></US:NumericUpDown>
                                 </StackPanel>
-
                                 <StackPanel Orientation="Horizontal" Margin="5">
                                     <Label Content="До"></Label>
                                     <US:NumericUpDown></US:NumericUpDown>
                                 </StackPanel>
-
                             </StackPanel>
-
-
                         </GroupBox>
-
                         <GroupBox>
                             <StackPanel>
                                 <Label Content="Общий баланс: "></Label>
@@ -93,36 +86,26 @@
                                 <Label Content="Всего комментариев"></Label>
                             </StackPanel>
                         </GroupBox>
-
                         <GroupBox>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="5">
                                     <Label Content="Смс: "></Label>
                                     <US:NumericUpDown Margin="11, 0, 0, 0"></US:NumericUpDown>
                                 </StackPanel>
-
                                 <StackPanel Orientation="Horizontal" Margin="5">
                                     <Label Content="Капча: "></Label>
                                     <US:NumericUpDown></US:NumericUpDown>
-
-
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
-
                         <GroupBox>
                             <StackPanel Margin="5">
                                 <Button Content="Загрузить аккаунты" Margin="5"></Button>
                                 <Button Content="Очистить лог" Margin="5"></Button>
-                                <Button Content="Сбросить все задачия" Margin="5"></Button>
+                                <Button Content="Сбросить все задачи" Margin="5"></Button>
                             </StackPanel>
-
-
                         </GroupBox>
-
                     </StackPanel>
-
-
                 </StackPanel>
             </Grid>
         </TabItem>
@@ -133,23 +116,16 @@
                     <RadioButton x:Name="rbAndroid" Content="Android"/>
                     <RadioButton x:Name="rbBrowser" Content="Browser"/>
                 </StackPanel>
-                <TextBox Height="23" Text="ПУть к файлу с аккаунтами" TextWrapping="Wrap" x:Name="tbUsers" Margin="5, 5, 5, 0"/>
+                <TextBox Height="23" Text="Пyть к файлу с аккаунтами" TextWrapping="Wrap" x:Name="tbUsers" Margin="5, 5, 5, 0"/>
                 <TextBox Height="23" Text="Путь к файлу с прокси" TextWrapping="Wrap" x:Name="tbProxy" Margin="5, 0, 5, 0"/>
                 <Button Content="Start" Click="Start" Margin="5, 0, 5, 10"/>
-
                 <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbLike"/>
                 <Button Content="Like" Click="Like_Click" Margin="5, 0, 5, 10"/>
-
                 <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbComment"/>
                 <Button Content="Comment" Click="Comment_Click" Margin="5, 0, 5, 10"/>
-
                 <TextBox Height="23" TextWrapping="Wrap" Margin="5, 0, 5, 0" x:Name="tbSubscribe"/>
                 <Button Content="Subscribe" Click="Subscribe_Click" Margin="5, 0, 5, 10"/>
-
-
             </StackPanel>
-
-
         </TabItem>
     </TabControl>
 </Window>

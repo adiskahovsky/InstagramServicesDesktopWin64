@@ -17,12 +17,12 @@ namespace MailWorker
         ImapClient ic;
         Random random;
         int r;
-        public Mail(string login,string password)
+        public Mail(string login, string password)
         {
-                 random = new Random();
-                 r = random.Next(0,1000000);
-                ic = new ImapClient("imap.mail.ru", login, password, AuthMethods.Login, 993, true, true);
-                
+            random = new Random();
+            r = random.Next(0, 1000000);
+            ic = new ImapClient("imap.mail.ru", login, password, AuthMethods.Login, 993, true, true);
+
         }
         public string GetMailText(DateTime dt)
         {
@@ -31,19 +31,19 @@ namespace MailWorker
             {
                 var res = ic.SelectMailbox("INBOX");
             }
-            catch (Exception ex)
+            catch
             {
                 return "123456";
             }
             MailMessage[] mm = ic.GetMessages(ic.GetMessageCount() - 1, ic.GetMessageCount());
 
-            if (mm[mm.Length-1].Date > dt)
+            if (mm[mm.Length - 1].Date > dt)
             {
 
                 MailMessage message = ic.GetMessage(mm[mm.Length - 1].Uid);
 
                 string path = $"message{r}.html";
-                FileStream filestream = new FileStream(path,FileMode.Create);
+                FileStream filestream = new FileStream(path, FileMode.Create);
                 filestream.Close();
                 StreamWriter file = new StreamWriter(path);
                 file.Write(message.Body);
@@ -52,7 +52,7 @@ namespace MailWorker
                 Thread.Sleep(5000);
                 HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
 
-                HtmlAgilityPack.HtmlDocument doc = web.Load(Environment.CurrentDirectory+ @"\" +path);
+                HtmlAgilityPack.HtmlDocument doc = web.Load(Environment.CurrentDirectory + @"\" + path);
 
                 var nodes = doc.DocumentNode.SelectNodes("//p/font");
                 string result = nodes[0].InnerText;

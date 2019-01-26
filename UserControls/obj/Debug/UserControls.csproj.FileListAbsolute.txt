@@ -28,3 +28,13 @@ D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb
 D:\WorkSpaceC#\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csprojAssemblyReference.cache
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\bin\Debug\UserControls.dll
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\bin\Debug\UserControls.pdb
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.csprojResolveAssemblyReference.cache
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.g.cs
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls_MarkupCompile.cache
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls_MarkupCompile.lref
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\NumericUpDown.baml
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.g.resources
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.dll
+E:\Projects\InstagramFirstStage\InstagramServicesDesktopWin64\UserControls\obj\Debug\UserControls.pdb

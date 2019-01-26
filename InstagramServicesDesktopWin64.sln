@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramServicesDesktopWin64", "InstagramServicesDesktopWin64\InstagramServicesDesktopWin64.csproj", "{019304C8-054E-4EDA-9847-9DBBAE3C9779}"
 EndProject
@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailWorker", "MailWorker\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogLibrary", "LogLibrary\LogLibrary.csproj", "{3E389961-ED1D-40C6-8038-3C5672EA7066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsLibrary", "..\SettingsLibrary\SettingsLibrary\SettingsLibrary.csproj", "{F7477C1A-CA28-41C1-9921-8DE59BE1C552}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsLibrary", "..\..\InstagramServicesDesktopWin64\SettingsLibrary\SettingsLibrary.csproj", "{F7477C1A-CA28-41C1-9921-8DE59BE1C552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

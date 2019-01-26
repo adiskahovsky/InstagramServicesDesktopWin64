@@ -90,7 +90,7 @@ namespace InstagramServicesDesktopWin64
                     try
                     {
                         mail = new Mail(UserDick["maillogin"], UserDick["mailpassword"]);
-                    } catch (Exception ex)
+                    } catch
                     {
                         mail = null;
                     }

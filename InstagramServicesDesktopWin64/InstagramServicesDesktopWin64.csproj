@@ -158,7 +158,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SettingsLibrary\SettingsLibrary\SettingsLibrary.csproj">
+    <ProjectReference Include="..\..\..\InstagramServicesDesktopWin64\SettingsLibrary\SettingsLibrary.csproj">
       <Project>{f7477c1a-ca28-41c1-9921-8de59be1c552}</Project>
       <Name>SettingsLibrary</Name>
     </ProjectReference>

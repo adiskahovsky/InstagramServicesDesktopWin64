@@ -38,13 +38,11 @@ namespace InstagramServicesDesktopWin64
     {
         ObservableCollection<ShowCollection> _grid;
         List<BackgroundWorker> workers;
-
         List<IInstagram> users;
         List<IInstagram> Login_Users;
-        int sum = 0;
         private Color _color;
         LogIO.Logging logging = new LogIO.Logging(LogIO.WriteLog);
-        bool checkbox = true;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -55,14 +53,7 @@ namespace InstagramServicesDesktopWin64
             _grid = new ObservableCollection<ShowCollection>();
             dgMain.ItemsSource = _grid;
             _color = Colors.White;
-            
-
         }
-
-
-
-
-
 
 
         private void dgMain_LoadingRow(object sender, DataGridRowEventArgs e)
@@ -95,7 +86,7 @@ namespace InstagramServicesDesktopWin64
 
         private void ShowLog(string tmp, Log log)
         {
-            this.Dispatcher.Invoke(() => tbLogs.Text = tbLogs.Text + log + '\n'); 
+            this.Dispatcher.Invoke(() => tbLogs.Text = tbLogs.Text + log + '\n');
         }
 
 
@@ -336,11 +327,6 @@ namespace InstagramServicesDesktopWin64
         //    e.Row.Background = new SolidColorBrush(_color);
         //}
 
-        private async void Verify(object sender, RoutedEventArgs e)
-        {
-            // var result = await request.Verify(tbVerifyCode.Text);
-            // MessageBox.Show($"Authorized: {result.Succeeded}\n{result.Info.Message}");
-        }
 
         private async void Like_Click(object sender, RoutedEventArgs e)
         {
